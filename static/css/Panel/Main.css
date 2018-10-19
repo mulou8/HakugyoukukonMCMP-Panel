@@ -1,0 +1,116 @@
+.com{
+    height: 75px;
+    background-color: #222222;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.com .pic{
+    display: none;
+}
+
+.com .about{
+    display: none;
+}
+
+.com .team{
+    display: none;
+}
+
+.com .link{
+    display: none;
+}
+
+.com hr{
+    display: none;
+}
+
+.com .container{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.com p{
+    margin-bottom: 2px;
+}
+
+/**
+=======================================================================
+ */
+
+.tools{
+    height: 92%;
+}
+
+ul li{
+    list-style-type:none;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-size: 22px;
+
+    padding-left: 16%;
+}
+
+ul li:hover{
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.itmes{
+    display: inline-block !important;
+}
+
+ul{
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.81);
+    color: #c9c9c9;
+
+    margin-bottom: 0;
+    width: 190px;
+
+    padding-left: 0px;
+    height: 92%;
+
+    margin: 0;
+}
+
+.tools #title{
+    background-color: #3990ca;
+    color: #f1f1f1;
+
+    width: 100%;
+
+    display: block;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-bottom: 0;
+
+    font-size: 40px;
+    text-align: center;
+
+    height: 70px;
+}
+
+/*
+-=======================================================================-
+ */
+
+.Main-Part{
+    display: inline-block;
+    vertical-align: top;
+
+    width: 89.8%;
+    height: 92%;
+}
+
+iframe{
+    border: 0;
+
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,42 @@
+.com{
+    display: none;
+}
+
+/**
+=================================
+ */
+
+.container-info #survey{
+    width: 90%;
+
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.small-box{
+    display: inline-block;
+    vertical-align: top;
+
+    width: 16%;
+    height: 14%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.small-box-title{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 14px;
+}
+
+#times{
+    font-size: 40px;
+}
+
+.small-box-body{
+}
+
+.small-box-container{
+    position: relative;
+    left: 24%;
+}

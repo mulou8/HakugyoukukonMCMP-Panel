@@ -1,0 +1,289 @@
+/*================================盒子样式=========================*/
+
+.SaigyoujiYuyuko_box{
+	background-color: #ffffff;
+}
+
+.SaigyoujiYuyuko_box .box-info .box-head{
+	color: #464646;
+	font-size: 18px;
+	font-weight: bold;
+	
+	border-top: 3px #06e7f2 solid !important;
+	border-bottom: 1px #ebebeb solid !important;
+	
+}
+
+.SaigyoujiYuyuko_box .box-sussc .box-head{
+	color: #464646;
+	font-size: 18px;
+	font-weight: bold;
+	
+	border-top: 3px #05d348 solid !important;
+	border-bottom: 1px #ebebeb solid !important;
+	
+}
+
+.SaigyoujiYuyuko_box .box-danger .box-head{
+	color: #464646;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: bold;
+	
+	border-top: 3px #c10000 solid !important;
+	border-bottom: 1px #ebebeb solid !important;
+	
+}
+
+
+
+.SaigyoujiYuyuko_box .box-head .box-title{
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+.SaigyoujiYuyuko_box .box-body{
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+
+/*==============================表单样式==============================*/
+
+.SaigyoujiYuyuko_form{
+	color: #858585;
+}
+
+.SaigyoujiYuyuko_form .form-input{
+	color: #474747 !important;
+	
+	border-color: #b4b4b4;
+	
+	height: 30px !important;
+	width: 180px;
+	
+	outline:none !important;
+	
+	border-style: solid;
+	border-collapse: collapse;
+	
+	BORDER-TOP:0px;
+	BORDER-LEFT:0px;
+	BORDER-RIGHT:0px;
+}
+
+/*========================按钮=================================*/
+.SaigyoujiYuyuko_form .form-input:focus{
+	border-color: #06a3f7;
+}
+
+.SaigyoujiYuyuko_btn .info{
+	width: 180px;
+	height: 30px;
+	
+	border-color: #b4b4b4;
+	
+	BORDER-TOP:0px;
+	BORDER-LEFT:0px;
+	border-bottom:0px;
+	BORDER-RIGHT:0px;
+	
+	background-color: #3d9bf1;
+	color: #e3e6e4;
+	
+	float: left !important;
+	display: block;
+}
+
+.SaigyoujiYuyuko_btn .sussc{
+	width: 150px;
+	height: 30px;
+
+	border-color: #b4b4b4;
+
+	BORDER-TOP:0px;
+	BORDER-LEFT:0px;
+	border-bottom:0px;
+	BORDER-RIGHT:0px;
+
+	background-color: #00d24f;
+	color: #e3e6e4;
+
+	float: left !important;
+	display: block;
+}
+
+.SaigyoujiYuyuko_btn .danger{
+	width: 150px;
+	height: 30px;
+
+	border-color: #b4b4b4;
+
+	BORDER-TOP:0px;
+	BORDER-LEFT:0px;
+	border-bottom:0px;
+	BORDER-RIGHT:0px;
+
+	background-color: #cc0000;
+	color: #e3e6e4;
+
+	float: left !important;
+	display: block;
+}
+
+.red-button{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px/25px Arial, sans-serif;
+
+	text-shadow: 1px 1px 1px rgba(255,255,255, .22);
+
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+	box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+
+	-webkit-transition: all 0.15s ease;
+	-moz-transition: all 0.15s ease;
+	-o-transition: all 0.15s ease;
+}
+
+/*========================弹出=================================*/
+.SaigyoujiYuyuko_alart{
+	z-index: 2;
+	
+	opacity: 0.95; 
+	
+	background-color: #a6a6a6;
+	
+	width: 100%;
+	height: 100%;
+	
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.SaigyoujiYuyuko_alart .alart_text{
+	z-index: 1;
+		
+	width: 294px;
+	height: 106px;
+	
+	background-color: #f1f1f1;
+	text-align: center;
+	
+	border: 1px;
+	border-color: #ececec;
+	border-style: solid ;
+	
+	position: absolute;
+    top: 40%;
+    left: 43%;
+    right: 0px;
+    bottom: 0px;
+    
+    font-size: 24px;
+	line-height: 24px;
+	
+}
+
+.alart_text:after {
+	
+	display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	content:"";
+}
+
+.com{
+	background-color: #212529;
+	padding-bottom: 0px;
+}
+
+.com .container{
+    padding-top: 16px;
+    color: white;
+}
+
+.com strong{
+    font-size: 20px;
+}
+
+.com img{
+	height: 130px;
+	width: 140px;
+    display: inline-block;
+}
+
+.com .pic{
+    display: inline-block;
+}
+
+.com .about-context{
+     padding-top: 30px;
+ }
+
+.about{
+    padding-left: 50px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.com .team-context{
+    padding-top: 30px;
+}
+
+.team{
+    padding-left: 50px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.com #about-name{
+    padding-bottom: 10px;
+}
+
+.com #team-name{
+    padding-bottom: 10px;
+}
+
+.link {
+    padding-left: 50px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.com .link-context{
+    padding-top: 10px;
+}
+
+.com a{
+    color: rgb(222, 74, 55);
+    font-size: 18px;
+}
+
+.blockcode{
+	overflow:hidden;
+	margin:0;
+	padding:0;
+	background:transparent;
+	color:#666;
+}
+
+.blockcode code{
+	font-family:Monaco,Consolas,'Lucida Console','Courier New',serif;
+	font-size:12px;line-height:1.8em;
+}
+
+.blockcode code{
+	font-family:'Courier New',serif;
+}
