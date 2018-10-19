@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d705702d-295d-4399-a565-6fa297294d19" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/CookieYJT.php" beforeDir="false" afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/CookieYJT.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Controllers/PanelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Controllers/PanelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Models/PanelModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Models/PanelModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Models/UserModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Models/UserModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Panel/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Panel/Home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/en.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/en.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fzby.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/static/fonts/fzby.ttf" afterDir="false" />
-    </list>
+    <list default="true" id="d705702d-295d-4399-a565-6fa297294d19" name="默认的" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,12 +422,12 @@
       <workItem from="1539437939395" duration="5421000" />
       <workItem from="1539486800734" duration="5275000" />
       <workItem from="1539496028120" duration="331000" />
-      <workItem from="1539942993897" duration="9761000" />
+      <workItem from="1539942993897" duration="10319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71390000" />
+    <option name="totallyTimeSpent" value="71948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
