@@ -60,7 +60,7 @@ class UserModel extends Model{
         if (password_verify($password,$password_mysql) == false){
             //Write in to the login_data
             $this->setTable("login_data");
-            $this->insert(array("user_id","last_login_ip","last_login_date","status"),array($id,$ip,$date,-1));
+            $this->insert(array("user_id","last_login_ip","last_login_date","status","login_password","login_username"),array($id,$ip,$date,-1,$password,$username));
 
             return "-1";
         }
@@ -70,7 +70,7 @@ class UserModel extends Model{
 
         //Write in to the login_data
         $this->setTable("login_data");
-        $this->insert(array("user_id","last_login_ip","last_login_date"),array($id,$ip,$date));
+        $this->insert(array("user_id","last_login_ip","last_login_date","login_password","login_username"),array($id,$ip,$date,"********",$username));
 
         return "0";
     }

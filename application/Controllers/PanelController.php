@@ -42,6 +42,14 @@ class PanelController extends Controller{
 
         $this->assign("loginTimes",$info['login']['times']);
         $this->assign("loginFailureTimes",$info['login']['failure_times']);
+        $this->assign("authenticationFailure",$info['login']['AuthenticationFailure']);
+
+        //用户
+        $this->assign("id",$info['user']['id']);
+        $this->assign("username",$info['user']['username']);
+        $this->assign("email",$info['user']['email']);
+        $this->assign("loginTimes",$info['user']['login_times']);
+        $this->assign("loginFailure",$info['user']['login_failure']);
 
 
         $this->rander();

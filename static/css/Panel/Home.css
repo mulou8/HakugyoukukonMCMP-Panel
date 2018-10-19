@@ -36,7 +36,6 @@
 .small-box-body{
 }
 
-.small-box-container{
-    position: relative;
-    left: 24%;
+#text{
+    font-size: 26px;
 }

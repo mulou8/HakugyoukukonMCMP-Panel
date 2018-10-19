@@ -35,6 +35,8 @@ class CookieYJT{
     }
 
     public function verifyLoginYJT($yjt){
+        $conn = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_PORT);
+
         $yjt = base64_decode($yjt);
         $yjt = json_decode($yjt,true);
 
@@ -71,10 +73,6 @@ class CookieYJT{
             return "-2";  // key is not same
         }
 
-
-
-        $conn = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME,DB_PORT);
-
         $sql = "SELECT * FROM `user` WHERE username='".$arr[2]."'";
 
         if (mysqli_connect_error()) {
@@ -86,6 +84,7 @@ class CookieYJT{
         $respont = mysqli_fetch_array($run);
         $pass = $respont["password"];
         $user_id = $respont["id"];
+        $username = $respont["username"];
 
 
         //get info
@@ -97,7 +96,7 @@ class CookieYJT{
 
         if (password_verify($arr[3],$pass) == false){
             //write into mysql
-            $sql = "INSERT INTO `failure_token_data`(`user_id`,`failure_date`,`failure_ip`,`token_context`) VALUES ('$user_id','$date','$ip','".$_COOKIE['remember_token']."')";
+            $sql = "INSERT INTO `failure_token_data`(`user_id`,`failure_date`,`failure_ip`,`token_context`,`reson`,`username`) VALUES ('$user_id','$date','$ip','".$_COOKIE['remember_token']."','password wrong','$username')";
             mysqli_query($conn, $sql);
 
             setcookie("remember_token","",-999,"/");
@@ -111,6 +110,28 @@ class CookieYJT{
 
         mysqli_close($conn);
         return 0; //return 0
-
     }
+
+    public function getYjtInfo($yjt){
+        $yjt = base64_decode($yjt);
+        $yjt = json_decode($yjt,true);
+
+        $arr = explode(
+            "|",
+            base64_decode($yjt['key'])
+        );
+
+
+        $info['token']['time'] = $yjt['time'];
+        $info['token']['expire'] = $yjt['expire'];
+        $info['token']['signature'] = $yjt['signature'];
+        $info['token']['location'] = $yjt['location'];
+        $info['token']['key']['username'] = $arr[2];
+        $info['token']['key']['password'] = $arr[3];
+
+        return $info;
+    }
+
+
+
 }
