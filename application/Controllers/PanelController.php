@@ -54,4 +54,9 @@ class PanelController extends Controller{
 
         $this->rander();
     }
+
+
+    public function SystemInfo(){
+        $this->rander();
+    }
 }

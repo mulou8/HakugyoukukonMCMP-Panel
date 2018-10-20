@@ -1,6 +1,3 @@
-<?php
-
-?>
 <html>
 	<head>
 		<title>白玉魂MC服务器管理面板 | 后台</title>

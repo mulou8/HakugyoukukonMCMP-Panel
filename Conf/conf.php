@@ -11,5 +11,7 @@
 	$config['mvc']['defaultController'] = 'Main'; //切记不能加Controller
 	$config['mvc']['defaultAction'] = 'Show';
 	$config['mvc']['key'] = "SaigyoujiYuyuko-HakugyokuSoulMVC&HMCP::2018107100337";
+
+	$config['app']['version'] = "V1.0.0";
     
     return $config;

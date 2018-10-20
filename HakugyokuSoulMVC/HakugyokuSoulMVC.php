@@ -107,6 +107,7 @@ class HakugyokuSoulMVC {
 		define("MVC_ACTION",$this->config['mvc']['defaultAction']);
 
 		define("APP_KEY",$this->config['mvc']['key']);
+		define("APP_VER",$this->config['app']['version']);
 	}
 
     private function loadClass($controller){

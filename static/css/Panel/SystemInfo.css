@@ -1,0 +1,60 @@
+.com{
+    display: none;
+}
+
+#web-info{
+    display: inline-block;
+    vertical-align: top;
+
+    width: 44%;
+    height: 42%;
+}
+
+#system-info{
+    display: inline-block;
+    vertical-align: top;
+
+    margin-left: 5%;
+
+    width: 44%;
+    height: 40%;
+}
+
+.container-info{
+    margin-left: 6%;
+}
+
+#system-usage{
+    width: 90%;
+    vertical-align: auto;
+
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.small-box{
+    display: inline-block;
+    vertical-align: top;
+
+    width: 16%;
+    height: 14%;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.small-box-title{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 14px;
+}
+
+#times{
+    font-size: 40px;
+}
+
+.small-box-body{
+}
+
+#text{
+    font-size: 26px;
+}
