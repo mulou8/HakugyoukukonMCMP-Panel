@@ -2,11 +2,13 @@
 
 <div class="tools">
     <p id="title">
-        <?php echo $title?>
+        <img src="/static/png/PanelBar-190x55.png">
     </p>
 
     <div class="itmes">
         <ul>
+            <li style="padding: 0;">
+            </li>
 
             <li id="home">
                 <p class="fa fa-home"></p>&nbsp;<?php echo $home?>

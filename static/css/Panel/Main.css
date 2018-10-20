@@ -78,22 +78,22 @@ ul{
 }
 
 .tools #title{
-    background-color: #3990ca;
+    background-color: rgba(0, 0, 0, 0.81);
+
+    padding-left: 5px;
+    padding-top: 22px;
+
     color: #f1f1f1;
 
     width: 100%;
 
     display: block;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
-
     margin-bottom: 0;
 
     font-size: 40px;
-    text-align: center;
 
-    height: 70px;
+    height: 80px;
 }
 
 /*
