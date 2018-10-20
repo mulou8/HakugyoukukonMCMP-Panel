@@ -5,6 +5,20 @@
 		<meta  http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<meta name="renderer" content="ie-stand">
 
+
+        <link rel="stylesheet" href="/static/css/font-awesome.css"/>
 		<link rel="stylesheet" href="/static/css/Panel/Home.css"/>
         <link rel="stylesheet" href="/static/css/SaigyoujiYuyuko.css">
+
+        <style type="text/css">
+            body{
+                font-family: 'FontAwesome';
+            }
+
+            @font-face{
+                font-family: 'FontAwesome';
+                font-display:auto;
+                src: url('/static/fonts/FontAwesome.otf');
+            }
+        </style>
 	</head>

@@ -44,47 +44,39 @@
 
         <script>
             $(document).ready(function () {
+                //tools高度自适应
+                var itmes_high = document.getElementsByClassName("tools")[0].offsetHeight - document.getElementById("title").scrollHeight;
+                document.getElementsByClassName("itmes")[0].style.height = itmes_high;
+
                 //iframe自适应
                 var windows_high = window.innerHeight;
                 var windows_width = window.innerWidth;
 
                 //alert(windows_width + "*" + windows_high);
+                var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width() - 4; // 198
 
-                var iframe_high = windows_high - $("#title").high - $(".com").high;
-                var iframe_width = windows_width - $(".itmes").width() - 20; // 198
-
-                $(".Main-Part").css("height",iframe_high);
+                $(".Main-Part").css("height",itmes_high);
                 $(".Main-Part").css("width",iframe_width);
 
 
-                //tools高度自适应
-                var tools_high = windows_high;
-                $(".tools").css("height",tools_high);
 
-                $(".tools").css("height",windows_high - 20);
+                //alert(document.getElementsByClassName("tools")[0].offsetHeight);
 
                 //页面大小自适应
                 window.onresize = function(){
+                    //tools高度自适应
+                    var itmes_high = document.getElementsByClassName("tools")[0].offsetHeight - document.getElementById("title").scrollHeight;
+                    document.getElementsByClassName("itmes")[0].style.height = itmes_high;
+
                     //iframe自适应
                     var windows_high = window.innerHeight;
                     var windows_width = window.innerWidth;
 
                     //alert(windows_width + "*" + windows_high);
+                    var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width() - 4; // 198
 
-                    var iframe_high = windows_high - $("#title").high - $(".com").high;
-
-                    var iframe_width = windows_width - $(".itmes").width() - 20; // 198
-
-                    //alert(iframe_width + "*" + iframe_high);
-
-                    $(".Main-Part").css("height",iframe_high);
+                    $(".Main-Part").css("height",itmes_high);
                     $(".Main-Part").css("width",iframe_width);
-
-
-
-                    //tools高度自适应
-                    var tools_high = windows_high - 10;
-                    $(".tools").css("height",tools_high);
                 }
 
 

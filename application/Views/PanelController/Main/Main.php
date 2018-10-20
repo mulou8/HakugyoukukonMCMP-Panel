@@ -7,9 +7,6 @@
 
     <div class="itmes">
         <ul>
-            <li style="padding: 0;">
-            </li>
-
             <li id="home">
                 <p class="fa fa-home"></p>&nbsp;<?php echo $home?>
             </li>
@@ -33,7 +30,6 @@
             <li id="userManagement">
                 <p class="fa fa-users"></p>&nbsp;<?php echo $userManagement?>
             </li>
-
         </ul>
     </div>
 
