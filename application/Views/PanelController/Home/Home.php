@@ -117,7 +117,7 @@
 
                         <tr>
                             <td><p>最新版本</p></td>
-                            <td><?php echo $newVersion?></td>
+                            <td>V<?php echo $newVersion?></td>
                         </tr>
 
                         <tr>
