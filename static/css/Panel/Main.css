@@ -55,7 +55,7 @@ ul li{
     padding-left: 16%;
 }
 
-ul li:hover{
+.use:hover{
     background-color: rgba(0, 0, 0, 0.25);
 }
 
@@ -101,6 +101,10 @@ li .image{
     vertical-align: middle;
     padding-left: 6px;
     display: inline-block;
+}
+
+.container-image .text #username{
+    margin-bottom: 2px;
 }
 
 img{

@@ -18,27 +18,27 @@
 
             </li>
 
-            <li id="home">
+            <li id="home" class="use">
                 <p class="fa fa-home"></p>&nbsp;<?php echo $home?>
             </li>
 
-            <li id="systemInfo">
+            <li id="systemInfo" class="use">
                 <p class="fa fa-dashboard"></p>&nbsp;<?php echo $systemInfo?>
             </li>
 
-            <li id="systemSetting">
+            <li id="systemSetting" class="use">
                 <p class="fa fa-cog"></p>&nbsp;&nbsp;<?php echo $systemSetting?>
             </li>
 
-            <li id="serverList">
+            <li id="serverList" class="use">
                 <p class="fa fa-server"></p>&nbsp;<?php echo $serverList?>
             </li>
 
-            <li id="addServer">
+            <li id="addServer" class="use">
                 <p class="fa fa-plus"></p>&nbsp;&nbsp;<?php echo $addServer?>
             </li>
 
-            <li id="userManagement">
+            <li id="userManagement" class="use">
                 <p class="fa fa-users"></p>&nbsp;<?php echo $userManagement?>
             </li>
         </ul>
