@@ -24,6 +24,12 @@ class PanelController extends Controller{
     public function Main(){
         $this->loadLanguageFile();
 
+        //信息
+        $info = (new PanelModel())->getInfo();
+        $this->assign("id",$info['user']['id']);
+        $this->assign("username",$info['user']['username']);
+        $this->assign("emailMd5",md5($info['user']['email']));
+
         //语言
         $this->assign("title",$this->language['WebInfo']["Title"]);
         $this->assign("home",$this->language['Items']["Home"]);

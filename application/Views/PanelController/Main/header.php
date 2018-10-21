@@ -40,6 +40,12 @@
                 src: url('/static/fonts/en.ttf');
             }
 
+            @font-face {
+                font-family: 'Nico';
+                font-display:auto;
+                src: url('/static/fonts/nico.ttf');
+            }
+
 		</style>
 
         <script>
@@ -47,6 +53,9 @@
                 //tools高度自适应
                 var itmes_high = document.getElementsByClassName("tools")[0].offsetHeight - document.getElementById("title").scrollHeight;
                 document.getElementsByClassName("itmes")[0].style.height = itmes_high;
+
+                //头像自适应
+                $("ul").css("width",110 + document.getElementById("username").scrollWidth);
 
                 //iframe自适应
                 var windows_high = window.innerHeight;
@@ -60,8 +69,6 @@
 
                 //ifream偏移
                 $(".Main-Part").css("left",document.getElementsByClassName("itmes")[0].style.width);
-
-
 
                 //alert(document.getElementsByClassName("tools")[0].offsetHeight);
 
@@ -83,6 +90,9 @@
 
                     //ifream偏移
                     $(".Main-Part").css("left",document.getElementsByClassName("itmes")[0].style.width);
+
+                    //头像自适应
+                    $("ul").css("width",190 + $("#username").offsetWidth);
                 }
 
 

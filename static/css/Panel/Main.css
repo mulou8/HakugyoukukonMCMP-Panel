@@ -80,20 +80,35 @@ ul{
 .tools #title{
     background-color: rgba(0, 0, 0, 0.81);
 
-    padding-left: 5px;
-    padding-top: 22px;
+    padding-top: 28px;
+}
 
-    color: #f1f1f1;
+li .image{
+    border-radius: 60px;
+    padding-left: 0% !important;
+}
 
-    width: 100%;
+.image-li{
+    padding-left: 6%;
+}
 
-    display: block;
+.container-image{
+    display: inline-block;
+    font-size: 16px;
+}
 
-    margin-bottom: 0;
+.container-image .text{
+    vertical-align: middle;
+    padding-left: 6px;
+    display: inline-block;
+}
 
-    font-size: 40px;
+img{
+    display: inline-block;
+}
 
-    height: 80px;
+#title .user{
+    padding-left: 28px;
 }
 
 /*

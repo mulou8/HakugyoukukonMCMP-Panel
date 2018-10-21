@@ -2,13 +2,22 @@
 
 <div class="tools">
     <div id="title">
-        <div class="user">
-
-        </div>
     </div>
 
     <div class="itmes">
         <ul>
+            <li class="image-li">
+                <div class="container-image">
+                    <img class="image" src="https://www.gravatar.com/avatar/<?php echo $emailMd5?>?s=80">
+
+                    <div class="text">
+                        <p id="username"><?php echo $username?></p>
+                        <p style="font-family: 'nico'; color: #72d3ff">HGK-MCSMP</p>
+                    </div>
+                </div>
+
+            </li>
+
             <li id="home">
                 <p class="fa fa-home"></p>&nbsp;<?php echo $home?>
             </li>
