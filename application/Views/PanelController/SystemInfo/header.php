@@ -6,5 +6,6 @@
 		<meta name="renderer" content="ie-stand">
 
 		<link rel="stylesheet" href="/static/css/Panel/SystemInfo.css"/>
-        <link rel="stylesheet" href="/static/css/SaigyoujiYuyuko.css">
+        <link rel="stylesheet" href="/static/css/Black.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
 	</head>

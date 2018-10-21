@@ -1,72 +1,87 @@
 <body>
 <div class="container-info">
-    <div class="SaigyoujiYuyuko_box" id="web-info">
-        <div class="box-info">
-
-            <div class="box-head">
-                <div class="box-title">Web服务器信息</div>
+    <div class="box" id="web-info">
+            <div class="box-head" id="black">
+                Web服务器信息
             </div>
 
             <div class="box-body">
-                <p>WEB 服务器: <?php echo $_SERVER['SERVER_SOFTWARE'];?></p>
-                <p>WEB 服务器端口: <?php echo $_SERVER['SERVER_PORT'];?></p>
-                <p>PHP运行方式: <?php echo php_sapi_name();?></p>
-                <p>当前客户端IP: <?php echo $_SERVER['REMOTE_ADDR'];?></p>
-                <p>当前域名: <?php echo $_SERVER["HTTP_HOST"];?></p>
-                <p>HTTP版本: <?php echo getenv('SERVER_PROTOCOL');;?></p>
-            </div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>WEB 服务器: </td>
+                            <td><?php echo $_SERVER['SERVER_SOFTWARE'];?></td>
+                        </tr>
 
-        </div>
+                        <tr>
+                            <td>WEB 服务器端口:</td>
+                            <td><?php echo $_SERVER['SERVER_PORT'];?></td>
+                        </tr>
+
+                        <tr>
+                            <td>PHP运行方式: </td>
+                            <td><?php echo php_sapi_name();?></td>
+                        </tr>
+
+                        <tr>
+                            <td>当前客户端IP: </td>
+                            <td><?php echo $_SERVER['REMOTE_ADDR'];?></td>
+                        </tr>
+
+                        <tr>
+                            <td>当前域名: </td>
+                            <td><?php echo $_SERVER["HTTP_HOST"];?></td>
+                        </tr>
+
+                        <tr>
+                            <td>HTTP版本: </td>
+                            <td><?php echo getenv('SERVER_PROTOCOL');;?></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     </div>
 
-    <div class="SaigyoujiYuyuko_box" id="system-info">
-        <div class="box-info">
 
-            <div class="box-head">
-                <div class="box-title">系统信息</div>
-            </div>
-
-            <div class="box-body">
-                <p>WEB 服务器: <?php echo $_SERVER['SERVER_SOFTWARE'];?></p>
-                <p>PHP版本: <?php echo PHP_VERSION;?></p>
-                <p>ZEND版本: <?php echo zend_version();?></p>
-                <p>PHP运行方式: <?php echo php_sapi_name();?></p>
-                <p>操作系统: <?php echo php_uname();?></p>
-                <p>PHP当前进程ID: <?php echo getmypid();?></p>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<div class="SaigyoujiYuyuko_box" id="system-usage">
-    <div class="box-info">
-
+    <div class="box" id="system-info">
         <div class="box-head">
-            <div class="box-title">面板信息</div>
+            <div class="box-title">系统信息</div>
         </div>
 
         <div class="box-body">
-            <div class="small-box-container">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>WEB 服务器: </td>
+                        <td><?php echo $_SERVER['SERVER_SOFTWARE'];?></td>
+                    </tr>
 
-                <div class="small-box">
-                    <div class="small-box-title"><strong>当前版本</strong></div>
+                    <tr>
+                        <td>PHP版本: </td>
+                        <td><?php echo PHP_VERSION;?></td>
+                    </tr>
 
-                    <div class="small-box-body" id="times">
-                        <?php echo APP_VER?>
-                    </div>
-                </div>
+                    <tr>
+                        <td>ZEND版本: </td>
+                        <td><?php echo zend_version();?></td>
+                    </tr>
 
-                <div class="small-box">
-                    <div class="small-box-title"><strong>最新版本</strong></div>
+                    <tr>
+                        <td>PHP运行方式: </td>
+                        <td><?php echo php_sapi_name();?></td>
+                    </tr>
 
-                    <div class="small-box-body" id="times">
-                        <?php echo APP_VER?>
-                    </div>
-                </div>
+                    <tr>
+                        <td>操作系统: </td>
+                        <td><?php echo php_uname();?></td>
+                    </tr>
 
-            </div>
+                    <tr>
+                        <td>PHP当前进程PID: </td>
+                        <td><?php echo getmypid();?></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>

@@ -1,0 +1,27 @@
+body{
+    background-color: #131313 !important;
+    margin: 0;
+}
+
+.box{
+    color: #f1f1f1;
+}
+
+.box-body{
+    background-color: #1d1d1d;
+    color: white !important;
+
+    padding-left: 5px;
+    padding-top: 8px;
+}
+
+.box .box-head{
+    color: #464646;
+    font-size: 18px;
+    font-weight: bold;
+
+    background-color: #252525;
+
+    border-top: 4px #4e4e4e solid !important;
+    border-bottom: 1px black solid !important;
+}
