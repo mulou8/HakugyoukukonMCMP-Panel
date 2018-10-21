@@ -28,6 +28,9 @@ define('APP_DEBUG',FALSE);
 // 加载框架文件
 require(APP_PATH . 'HakugyokuSoulMVC/HakugyokuSoulMVC.php');
 
+//内存限制
+ini_set('memory_limit', '256');
+
 // 加载配置文件
 $config = require(APP_PATH . 'Conf/conf.php');
 

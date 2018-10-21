@@ -48,9 +48,10 @@ class PanelModel extends Model{
         $info['user']['login_times'] = $this->searchRow("*","login_username='".$tokenInfo['token']['key']['username']."'");
         $info['user']['login_failure'] = $this->searchRow("*","login_username='".$tokenInfo['token']['key']['username']."' AND status=-1");
 
-
-
-
         return $info;
+    }
+
+    public function Version(){
+        return $this->getVersion();
     }
 }

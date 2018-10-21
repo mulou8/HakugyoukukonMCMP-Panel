@@ -10,10 +10,13 @@
  */
 namespace HakugyokuSoulMVC\tools;
 
+include_once APP_PATH."HakugyokuSoulMVC/tools/Version.php";
+use HakugyokuSoulMVC\tools\Version;
+
 // This code sucks, you know it and I know it.
 // Move on and call me an idiot later.
 
-class CookieYJT{
+class CookieYJT extends Version {
 
     // This function has been here since 1987. DON'T FXXKING TOUCH IT
     public function makeLoginYJT($location,$timeLimit,$username,$password){

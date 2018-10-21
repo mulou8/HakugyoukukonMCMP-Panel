@@ -57,6 +57,12 @@ class PanelController extends Controller{
         $this->assign("loginTimes",$info['user']['login_times']);
         $this->assign("loginFailure",$info['user']['login_failure']);
 
+        //版本
+        $info = (new PanelModel())->Version();
+        $this->assign("newVersion",$info['Version']);
+        $this->assign("type",$info['type']);
+        $this->assign("releaseDate",$info['ReleaseDate']);
+
 
         $this->rander();
     }

@@ -101,4 +101,39 @@
         </div>
     </div>
 
+    <div class="SaigyoujiYuyuko_box" id="survey">
+        <div class="box-info">
+            <div class="box-head">
+                <div class="box-title">版本信息</div>
+            </div>
+
+            <div class="box-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><p>当前版本</p></td>
+                            <td>V<?php echo APP_VER?></td>
+                        </tr>
+
+                        <tr>
+                            <td><p>最新版本</p></td>
+                            <td><?php echo $newVersion?></td>
+                        </tr>
+
+                        <tr>
+                            <td><p>版本类型</p></td>
+                            <td><?php echo $type?></td>
+                        </tr>
+
+                        <tr>
+                            <td><p>发布日期</p></td>
+                            <td><?php echo $releaseDate?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
 </div>

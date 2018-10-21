@@ -12,6 +12,6 @@
 	$config['mvc']['defaultAction'] = 'Show';
 	$config['mvc']['key'] = "SaigyoujiYuyuko-HakugyokuSoulMVC&HMCP::2018107100337";
 
-	$config['app']['version'] = "V1.0.0";
+	$config['app']['version'] = "1.0.0";
     
     return $config;
