@@ -53,10 +53,13 @@
                 var windows_width = window.innerWidth;
 
                 //alert(windows_width + "*" + windows_high);
-                var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width() - 4; // 198
+                var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width(); // 198
 
                 $(".Main-Part").css("height",itmes_high);
                 $(".Main-Part").css("width",iframe_width);
+
+                //ifream偏移
+                $(".Main-Part").css("left",document.getElementsByClassName("itmes")[0].style.width);
 
 
 
@@ -65,7 +68,7 @@
                 //页面大小自适应
                 window.onresize = function(){
                     //tools高度自适应
-                    var itmes_high = document.getElementsByClassName("tools")[0].offsetHeight - document.getElementById("title").scrollHeight;
+                    var itmes_high = window.innerHeight - document.getElementById("title").scrollHeight - document.getElementsByClassName("com")[0].scrollHeight;
                     document.getElementsByClassName("itmes")[0].style.height = itmes_high;
 
                     //iframe自适应
@@ -73,10 +76,13 @@
                     var windows_width = window.innerWidth;
 
                     //alert(windows_width + "*" + windows_high);
-                    var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width() - 4; // 198
+                    var iframe_width = document.getElementsByClassName("tools")[0].offsetWidth - $("ul").width(); // 198
 
                     $(".Main-Part").css("height",itmes_high);
                     $(".Main-Part").css("width",iframe_width);
+
+                    //ifream偏移
+                    $(".Main-Part").css("left",document.getElementsByClassName("itmes")[0].style.width);
                 }
 
 

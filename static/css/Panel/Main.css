@@ -104,6 +104,8 @@ ul{
     display: inline-block;
     vertical-align: top;
 
+    position: absolute;
+
     width: 89.8%;
     height: 85%;
 }
