@@ -63,57 +63,40 @@
             </div>
 
             <div class="box-body">
-                <div class="small-box-container">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><p>用户ID</p></td>
+                            <td><?php echo $id?></td>
+                        </tr>
 
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>用户ID</strong></div>
+                        <tr>
+                            <td><p>用户名</p></td>
+                            <td><?php echo $username?></td>
+                        </tr>
 
-                        <div class="small-box-body" id="times">
-                            <?php echo $id?>
-                        </div>
-                    </div>
+                        <tr>
+                            <td><p>邮箱</p></td>
+                            <td><?php echo $email?></td>
+                        </tr>
 
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>用户名</strong></div>
+                        <tr>
+                            <td><p>登录次数</p></td>
+                            <td><?php echo $loginTimes?></td>
+                        </tr>
 
-                        <div class="small-box-body" id="text">
-                            <?php echo $username?>
-                        </div>
-                    </div>
+                        <tr>
+                            <td><p>登录失败</p></td>
+                            <td><?php echo $loginFailure?></td>
+                        </tr>
 
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>邮箱</strong></div>
+                        <tr>
+                            <td><p>Token验证失败</p></td>
+                            <td><?php echo $authenticationFailure?></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <div class="small-box-body" id="text">
-                            <?php echo $email?>
-                        </div>
-                    </div>
-
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>登录次数</strong></div>
-
-                        <div class="small-box-body" id="times">
-                            <?php echo $loginTimes?>
-                        </div>
-                    </div>
-
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>登录失败</strong></div>
-
-                        <div class="small-box-body" id="times">
-                            <?php echo $loginFailure?>
-                        </div>
-                    </div>
-
-                    <div class="small-box">
-                        <div class="small-box-title"><strong>Token验证错误</strong></div>
-
-                        <div class="small-box-body" id="times">
-                            <?php echo $authenticationFailure?>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>

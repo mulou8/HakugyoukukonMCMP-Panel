@@ -1,9 +1,11 @@
 <body>
 
 <div class="tools">
-    <p id="title">
-        <img src="/static/png/PanelBar-190x55.png">
-    </p>
+    <div id="title">
+        <div class="user">
+
+        </div>
+    </div>
 
     <div class="itmes">
         <ul>

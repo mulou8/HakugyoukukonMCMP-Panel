@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d705702d-295d-4399-a565-6fa297294d19" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Main/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Main/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Panel/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Panel/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Main/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Main/Main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Panel/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Panel/Home.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,16 +120,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="config" value="4" />
-          <entry key="css" value="780" />
+          <entry key="css" value="806" />
           <entry key="html" value="137" />
-          <entry key="php" value="2617" />
+          <entry key="php" value="2692" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="780" />
+          <entry key="CSS" value="806" />
           <entry key="HTML" value="137" />
-          <entry key="PHP" value="2617" />
+          <entry key="PHP" value="2692" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -138,8 +140,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+            <state relative-caret-position="491">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -147,17 +149,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Main/Main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="114">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Main/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="1197">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -165,8 +167,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/Panel/Main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
+            <state relative-caret-position="320">
+              <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/Panel/Home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="757">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -174,8 +185,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+            <state relative-caret-position="209">
+              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -233,15 +244,15 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/MakeLOGO.html" />
         <option value="$PROJECT_DIR$/Debug/MakeLogo.php" />
-        <option value="$PROJECT_DIR$/static/css/Panel/Home.css" />
         <option value="$PROJECT_DIR$/static/css/SaigyoujiYuyuko.css" />
-        <option value="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" />
-        <option value="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" />
-        <option value="$PROJECT_DIR$/application/Views/PanelController/Main/Main.php" />
         <option value="$USER_HOME$/Desktop/泡泡/test.php" />
         <option value="$USER_HOME$/Desktop/paopao/test.php" />
         <option value="$PROJECT_DIR$/static/css/Panel/Main.css" />
         <option value="$PROJECT_DIR$/application/Views/PanelController/Main/header.php" />
+        <option value="$PROJECT_DIR$/application/Views/PanelController/Main/Main.php" />
+        <option value="$PROJECT_DIR$/application/Views/PanelController/Home/Home.php" />
+        <option value="$PROJECT_DIR$/application/Views/PanelController/Home/header.php" />
+        <option value="$PROJECT_DIR$/static/css/Panel/Home.css" />
       </list>
     </option>
   </component>
@@ -339,6 +350,11 @@
               <item name="HakugyokuSoulMcServerPanel" type="b2602c69:ProjectViewProjectNode" />
               <item name="HakugyokuSoulMcServerPanel" type="462c0819:PsiDirectoryNode" />
               <item name="Conf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HakugyokuSoulMcServerPanel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HakugyokuSoulMcServerPanel" type="462c0819:PsiDirectoryNode" />
+              <item name="Debug" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HakugyokuSoulMcServerPanel" type="b2602c69:ProjectViewProjectNode" />
@@ -443,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91055000" />
+    <option name="totallyTimeSpent" value="91369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -689,47 +705,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/Panel/Home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="48" column="19" lean-forward="true" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/泡泡/test.php" />
     <entry file="file://$USER_HOME$/Desktop/paopao/test.php" />
-    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Main/Main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/Panel/Main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="106" column="23" selection-start-line="106" selection-start-column="23" selection-end-line="106" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        <state relative-caret-position="320">
+          <caret line="77" column="1" lean-forward="true" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Main/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="1197">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Main/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Views/PanelController/Home/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/Panel/Home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
         </state>
       </provider>
     </entry>

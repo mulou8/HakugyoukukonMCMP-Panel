@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="/static/css/font-awesome.css"/>
 		<link rel="stylesheet" href="/static/css/Panel/Home.css"/>
         <link rel="stylesheet" href="/static/css/SaigyoujiYuyuko.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
 
         <style type="text/css">
             body{
