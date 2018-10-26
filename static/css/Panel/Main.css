@@ -79,8 +79,26 @@ ul{
 
 .tools #title{
     background-color: rgba(0, 0, 0, 0.81);
+}
 
-    padding-top: 28px;
+.tools #title p{
+    margin: 0;
+    color: white;
+}
+
+.login-out{
+    height: 7%;
+    width: 8%;
+
+    color: white;
+    text-align: center;
+    vertical-align:middle;
+    display: table-cell;
+
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 14px;
 }
 
 li .image{

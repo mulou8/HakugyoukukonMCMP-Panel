@@ -64,6 +64,28 @@ class PanelController extends Controller{
         $this->assign("releaseDate",$info['ReleaseDate']);
 
 
+        //语言
+        $this->loadLanguageFile();
+
+        $this->assign("MainInfoTitle",$this->language['Home']['MainInfo']['Title']);
+        $this->assign("DeamonNumber",$this->language['Home']['MainInfo']['DeamonNumber']);
+        $this->assign("McServerNumber",$this->language['Home']['MainInfo']['McServerNumber']);
+        $this->assign("LoginTimes",$this->language['Home']['MainInfo']['LoginTimes']);
+        $this->assign("FailureTimes",$this->language['Home']['MainInfo']['FailureTimes']);
+        $this->assign("TokenFailureTimes",$this->language['Home']['MainInfo']['TokenFailureTimes']);
+
+        $this->assign("UserTitle",$this->language['Home']['User']['Title']);
+        $this->assign("UserID",$this->language['Home']['User']['UserID']);
+        $this->assign("Username",$this->language['Home']['User']['Username']);
+        $this->assign("mail",$this->language['Home']['User']['mail']);
+
+        $this->assign("VerTitle",$this->language['Home']['Version']['Title']);
+        $this->assign("NewVer",$this->language['Home']['Version']['NewVer']);
+        $this->assign("VerType",$this->language['Home']['Version']['VerType']);
+        $this->assign("ReleaseDate",$this->language['Home']['Version']['ReleaseDate']);
+        $this->assign("NowVer",$this->language['Home']['Version']['NowVer']);
+
+
         $this->rander();
     }
 

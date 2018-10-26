@@ -103,13 +103,11 @@
                     var name = $(e.target).attr('id');
 
                     if (name == "home"){
-                        $("iframe").fadeIn(200);
                         $("iframe").attr("src","/Panel/Home");
                         return;
                     }
 
                     if (name == "systemInfo"){
-                        $("iframe").fadeIn(200);
                         $("iframe").attr("src","/Panel/SystemInfo");
                         return;
                     }

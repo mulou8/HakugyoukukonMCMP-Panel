@@ -2,6 +2,7 @@
 
 <div class="tools">
     <div id="title">
+        <div class="login-out"><i class="fa fa-sign-out"></i>退出登录</p></div><p>
     </div>
 
     <div class="itmes">
