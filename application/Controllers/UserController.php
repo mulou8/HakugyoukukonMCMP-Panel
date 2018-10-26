@@ -27,4 +27,8 @@ class UserController extends Controller{
         echo (new UserModel())->Login($username,$password);
     }
 
+    public function LoginOut(){
+        (new UserModel())->LoginOut();
+    }
+
 }

@@ -75,4 +75,9 @@ class UserModel extends Model{
         return "0";
     }
 
+    public function LoginOut(){
+        setcookie("remember_token","",-999,"/");
+        echo "<script>window.location.href = '/'</script>";
+    }
+
 }

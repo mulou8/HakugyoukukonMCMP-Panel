@@ -2,7 +2,9 @@
 
 <div class="tools">
     <div id="title">
-        <div class="login-out"><i class="fa fa-sign-out"></i>退出登录</p></div><p>
+        <div class="bar">
+            <p id="login-out"><i class="fa fa-sign-out"></i>退出登录</p>
+        </div>
     </div>
 
     <div class="itmes">
@@ -27,17 +29,14 @@
                 <p class="fa fa-dashboard"></p>&nbsp;<?php echo $systemInfo?>
             </li>
 
-            <li id="systemSetting" class="use">
-                <p class="fa fa-cog"></p>&nbsp;&nbsp;<?php echo $systemSetting?>
+            <li id="addServer" class="use">
+                <p class="fa fa-plus"></p>&nbsp;&nbsp;<?php echo $addServer?>
             </li>
 
             <li id="serverList" class="use">
                 <p class="fa fa-server"></p>&nbsp;<?php echo $serverList?>
             </li>
 
-            <li id="addServer" class="use">
-                <p class="fa fa-plus"></p>&nbsp;&nbsp;<?php echo $addServer?>
-            </li>
 
             <li id="userManagement" class="use">
                 <p class="fa fa-users"></p>&nbsp;<?php echo $userManagement?>

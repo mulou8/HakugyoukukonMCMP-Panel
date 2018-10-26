@@ -51,7 +51,7 @@
         <script>
             $(document).ready(function () {
                 //tools高度自适应
-                var itmes_high = document.getElementsByClassName("tools")[0].offsetHeight - document.getElementById("title").scrollHeight;
+                var itmes_high = window.innerHeight - document.getElementById("title").scrollHeight - document.getElementsByClassName("com")[0].scrollHeight;
                 document.getElementsByClassName("itmes")[0].style.height = itmes_high;
 
                 //头像自适应
@@ -137,6 +137,15 @@
                     }
 
 
+                });
+
+                $("#login-out").click(function () {
+                    $.get(
+                        "/User/LoginOut",
+                        function (data) {
+                            document.write(data);
+                        }
+                    );
                 });
             });
         </script>
