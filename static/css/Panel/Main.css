@@ -87,14 +87,9 @@ ul{
 }
 
 .login-out{
-    height: 7%;
-    width: 8%;
-
     color: white;
-    text-align: center;
-    vertical-align:middle;
-    display: table-cell;
 
+    text-align: right;
 
     padding-top: 8px;
     padding-bottom: 8px;

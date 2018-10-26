@@ -17,6 +17,8 @@ td{
 
     margin: 0 auto;
 
+    font-size: 16px;
+
     width: 80%;
 }
 
@@ -27,6 +29,8 @@ td{
 #web-info{
     display: block;
     vertical-align: top;
+
+    font-size: 16px;
 
     margin: 0 auto;
 

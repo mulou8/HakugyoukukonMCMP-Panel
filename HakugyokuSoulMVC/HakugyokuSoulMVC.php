@@ -7,7 +7,7 @@ class HakugyokuSoulMVC {
 	protected $config;
 	
 	function __construct($config) {
-		$this->config = $config;
+		$this->config = parse_ini_file($config,true);
 	}
 	
 	public function run(){
@@ -95,19 +95,19 @@ class HakugyokuSoulMVC {
     }
 
     private function getConf(){
-		define("DB_HOST",$this->config['db']['host']);
-		define("DB_NAME",$this->config['db']['dbname']);
-		define("DB_USER",$this->config['db']['username']);
-		define("DB_PASS",$this->config['db']['password']);
-		define("DB_PORT",$this->config['db']['port']);
+		define("DB_HOST",$this->config['Mysql']['Host']);
+		define("DB_NAME",$this->config['Mysql']['Dbname']);
+		define("DB_USER",$this->config['Mysql']['Username']);
+		define("DB_PASS",$this->config['Mysql']['Password']);
+		define("DB_PORT",$this->config['Mysql']['Port']);
 		
-		define("WEB_TITLE",$this->config['web']['title']);
+		define("WEB_TITLE",$this->config["Web"]['Title']);
 		
-		define("MVC_CONTROLLER",$this->config['mvc']['defaultController']);
-		define("MVC_ACTION",$this->config['mvc']['defaultAction']);
+		define("MVC_CONTROLLER",$this->config["Web"]['DefaultController']);
+		define("MVC_ACTION",$this->config["Web"]['DefaultAction']);
 
-		define("APP_KEY",$this->config['mvc']['key']);
-		define("APP_VER",$this->config['app']['version']);
+		define("APP_KEY",$this->config["Web"]['APP_Key']);
+		define("APP_VER",$this->config["Web"]['Version']);
 	}
 
     private function loadClass($controller){

@@ -32,7 +32,7 @@ require(APP_PATH . 'HakugyokuSoulMVC/HakugyokuSoulMVC.php');
 ini_set('memory_limit', '256');
 
 // 加载配置文件
-$config = require(APP_PATH . 'Conf/conf.php');
+$config =APP_PATH . 'Conf/Conf.ini';
 
 // 实例化框架类
 $MvcClass = new HakugyokuSoulMVC($config);

@@ -10,10 +10,23 @@ Target Server Type    : MYSQL
 Target Server Version : 50560
 File Encoding         : 65001
 
-Date: 2018-10-19 21:36:28
+Date: 2018-10-26 20:12:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for daemon
+-- ----------------------------
+DROP TABLE IF EXISTS `daemon`;
+CREATE TABLE `daemon` (
+  `id` int(11) NOT NULL,
+  `name` text,
+  `key` text NOT NULL,
+  `fqdn` text,
+  `ajax_host` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for failure_token_data
@@ -43,7 +56,24 @@ CREATE TABLE `login_data` (
   `last_login_ip` text,
   `last_login_date` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for servers
+-- ----------------------------
+DROP TABLE IF EXISTS `servers`;
+CREATE TABLE `servers` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `uuid` text NOT NULL,
+  `name` text NOT NULL,
+  `deamon_id` int(255) NOT NULL,
+  `port` int(11) NOT NULL,
+  `max_memery` int(11) NOT NULL,
+  `run_cmd` text NOT NULL,
+  `stop_cmd` text,
+  `jar_name` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for user
