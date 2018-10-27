@@ -112,21 +112,15 @@
                         return;
                     }
 
-                    if (name == "systemSetting"){
+                    if (name == "Daemon"){
                         $("iframe").fadeIn(200);
-                        $("iframe").attr("src","/Panel/SystemSetting");
+                        $("iframe").attr("src","/Servers/Daemon");
                         return;
                     }
 
-                    if (name == "serverList"){
+                    if (name == "Server"){
                         $("iframe").fadeIn(200);
-                        $("iframe").attr("src","/Servers/ServerList");
-                        return;
-                    }
-
-                    if (name == "addServer"){
-                        $("iframe").fadeIn(200);
-                        $("iframe").attr("src","/Servers/AddServer");
+                        $("iframe").attr("src","/Servers/Server");
                         return;
                     }
 

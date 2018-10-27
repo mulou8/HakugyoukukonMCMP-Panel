@@ -1,0 +1,15 @@
+.server-list{
+    width: 96%;
+
+    margin:  0 auto;
+
+    padding-top: 10px;
+    padding-left: 6px;
+    padding-bottom: 5px;
+
+    border: 1px rgba(255, 255, 255, 0.3) solid;
+}
+
+.server-list:hover{
+    background-color: #414141;
+}

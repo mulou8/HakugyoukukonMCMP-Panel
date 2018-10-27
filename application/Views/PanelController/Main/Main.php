@@ -29,12 +29,16 @@
                 <p class="fa fa-dashboard"></p>&nbsp;<?php echo $systemInfo?>
             </li>
 
-            <li id="addServer" class="use">
-                <p class="fa fa-plus"></p>&nbsp;&nbsp;<?php echo $addServer?>
+            <li id="Cmd" class="use">
+                <p class="fa fa-terminal"></p>&nbsp;&nbsp;<?php echo $terminal?>
             </li>
 
-            <li id="serverList" class="use">
-                <p class="fa fa-server"></p>&nbsp;<?php echo $serverList?>
+            <li id="Server" class="use">
+                <p class="fa fa-server"></p>&nbsp;<?php echo $ServerManagement?>
+            </li>
+
+            <li id="Daemon" class="use">
+                <p class="fa fa-cubes"></p>&nbsp;<?php echo $DaemonManagement?>
             </li>
 
 

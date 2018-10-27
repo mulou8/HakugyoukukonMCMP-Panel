@@ -1,0 +1,65 @@
+.com{
+    display: none;
+}
+
+.container-main{
+    margin-top: 14px;
+
+    width: 96% !important;
+
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.container-edit{
+    margin-top: 20px;
+}
+
+.list-daemon{
+    width: 94%;
+    margin: 2% auto;
+}
+
+.add-daemon{
+    margin-left: 3%;
+    vertical-align: top;
+
+    display: inline-block;
+    width: 45%;
+}
+
+.box{
+    width: 100%;
+}
+
+.form-input{
+    border: 0px;
+    border-bottom: 1px solid #545454;
+    padding-left: 3px;
+    outline: none;
+    height: 32px;
+    background: #1d1d1d ! important;
+    width: 98% ;
+}
+
+.form-input:focus{
+    margin-top: 6px;
+    border-bottom-color: white;
+}
+
+.daemon-info p{
+    margin-top: 6px;
+    margin-bottom: 2px;
+}
+
+.daemon-info #right{
+    margin-top: 12px;
+    padding-right: 2%;
+    text-align: right;
+}
+
+.Modify-daemon{
+    width: 45%;
+    vertical-align: top;
+    display: inline-block;
+}

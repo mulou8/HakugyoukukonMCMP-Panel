@@ -35,8 +35,9 @@ class PanelController extends Controller{
         $this->assign("home",$this->language['Items']["Home"]);
         $this->assign("systemInfo",$this->language['Items']["SystemInfo"]);
         $this->assign("systemSetting",$this->language['Items']["SystemSetting"]);
-        $this->assign("serverList",$this->language['Items']["ServerList"]);
-        $this->assign("addServer",$this->language['Items']["AddServer"]);
+        $this->assign("ServerManagement",$this->language['Items']["ServerManagement"]);
+        $this->assign("DaemonManagement",$this->language['Items']["DaemonManagement"]);
+        $this->assign("terminal",$this->language['Items']["Terminal"]);
         $this->assign("userManagement",$this->language['Items']["UserManagement"]);
 
         $this->rander();

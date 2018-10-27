@@ -19,7 +19,9 @@ return array(
         "SystemInfo" => "系统信息",
         "SystemSetting" => "系统设置",
         "ServerList" => "服务器列表",
-        "AddServer" => "添加服务器",
+        "Terminal" => "控制台",
+        "DaemonManagement" => "Daemon 管理",
+        "ServerManagement" => "服务器管理",
         "UserManagement" => "用户管理"
     )
 );
