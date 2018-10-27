@@ -41,4 +41,8 @@ class ServersController extends Controller{
     public function DaemonUpdate(){
         print_r((new ServersModel())->DaemonUpdate($_POST));
     }
+
+    public function DeleteDaemon(){
+        print_r((new ServersModel())->DeleteDaemon($_POST));
+    }
 }

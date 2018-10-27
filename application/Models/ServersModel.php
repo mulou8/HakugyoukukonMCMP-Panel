@@ -74,6 +74,7 @@ class ServersModel extends Model{
         return $json;
     }
 
+    
     public function DaemonUpdate(array $url){
         $url = array_values($url);
 
@@ -98,5 +99,25 @@ class ServersModel extends Model{
         $this->upDate("id=$id",array("name","key","fqdn","ajax_host","OS_type"),array($name,$key,$fqdn,$ajaxHost,$OS_type));
 
         return "0";
+    }
+
+    public function DeleteDaemon(array $url){
+        $id = @$url['id'];
+
+        if ($id == null || $id == "" || $id == " "){
+            return "-1";
+        }
+
+        $this->setTable("servers");
+        $response = $this->searchRow("*","deamon_id=$id");
+
+        if ($response != 0){
+            return "-2";
+        }
+
+        $this->setTable("daemon");
+        $this->delete("id=$id");
+
+        return 0;
     }
 }

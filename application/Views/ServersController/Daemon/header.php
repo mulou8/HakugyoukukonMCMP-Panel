@@ -80,7 +80,7 @@
                     var key  = $("#update-key").val();
                     var fqdn = $("#update-fqdn").val();
                     var ajax = $("#update-ajax").val();
-                    var os = document.getElementById("os").options[document.getElementById("os").selectedIndex].value;
+                    var os = document.getElementById("update-select").options[document.getElementById("update-select").selectedIndex].value;
 
                     $.post(
                         "/Servers/DaemonUpdate/",
@@ -113,10 +113,69 @@
 
 
                             }
-                            
+
                         }
                     );
                 });
+
+                $("#delete").click(function () {
+                    var messageBox = $(window.parent.document).find(".container-message");
+                    var message = $(window.parent.document).find("#message");
+
+                    var id = $("#update-DaemonID").val();
+
+                    if(confirm("您确定要删除此Daemon吗\n注意: 此操作不可逆")) {
+                        $.post(
+                            "/Servers/DeleteDaemon",
+                            "id=" + id,
+
+                            function (data) {
+                                if (data == "0"){
+                                    message.html("删除成功 请刷新本页面");
+
+                                    messageBox.fadeIn(400);
+                                    setTimeout(function () {
+                                        messageBox.fadeOut(400,"linear");
+
+                                        setTimeout(function () {
+                                            location.reload();
+                                        },420);
+                                    },700);
+
+                                    return;
+                                }
+
+                                if (data == "-2"){
+                                    message.html("此Daemon上搭载着服务器 无法删除");
+
+                                    messageBox.fadeIn(400);
+                                    setTimeout(function () {
+                                        messageBox.fadeOut(400,"linear");
+                                    },600);
+                                    return;
+                                }
+
+                                if (data == "-1"){
+                                    message.html("错误: 无法获取DaemonID 请联系开发者");
+
+                                    messageBox.fadeIn(400);
+                                    setTimeout(function () {
+                                        messageBox.fadeOut(400,"linear");
+                                    },800);
+                                    return;
+                                }
+
+                                message.html("未知错误<br>" + data);
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                            }
+                        );
+                    }
+                });
+
             });
         </script>
 	</head>
