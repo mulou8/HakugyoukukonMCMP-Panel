@@ -25,6 +25,8 @@
 
         <script>
             $(document).ready(function () {
+                $("#daemon-info").hide();
+
                 $("#add").click(function () {
                     var messageBox = $(window.parent.document).find(".container-message");
                     var message = $(window.parent.document).find("#message");
@@ -64,6 +66,54 @@
                                 },600);
                                 return;
                             }
+                        }
+                    );
+                });
+
+                
+                $("#update").click(function () {
+                    var messageBox = $(window.parent.document).find(".container-message");
+                    var message = $(window.parent.document).find("#message");
+
+                    var id = $("#update-DaemonID").val();
+                    var name = $("#update-name").val();
+                    var key  = $("#update-key").val();
+                    var fqdn = $("#update-fqdn").val();
+                    var ajax = $("#update-ajax").val();
+                    var os = document.getElementById("os").options[document.getElementById("os").selectedIndex].value;
+
+                    $.post(
+                        "/Servers/DaemonUpdate/",
+                        "name="+ name +"&key="+ key +"&fqdn="+ fqdn +"&ajax=" + ajax + "&os=" + os + "&id=" + id,
+
+                        function (data) {
+                            if (data == "0"){
+                                message.html("更新成功 请刷新本页面");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+
+                                    setTimeout(function () {
+                                        location.reload();
+                                    },420);
+                                },600);
+
+                                return;
+                            }
+
+                            if (data == "-1"){
+                                message.html("禁止空字段 请检查表单");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },600);
+                                return;
+
+
+                            }
+                            
                         }
                     );
                 });

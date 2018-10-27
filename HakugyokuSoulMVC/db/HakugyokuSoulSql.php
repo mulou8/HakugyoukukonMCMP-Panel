@@ -86,7 +86,7 @@ class HakugyokuSoulSql extends BootStrap{
 
         $run = mysqli_query($con, $sql);
 
-        $respont = mysqli_fetch_array($run);
+        $respont = mysqli_fetch_assoc($run);
         return $respont;
 
         mysqli_close($con);

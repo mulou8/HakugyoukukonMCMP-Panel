@@ -21,6 +21,9 @@ class ServersController extends Controller{
         (new ServersModel())->userVerification(@$_COOKIE['remember_token']);
     }
 
+    /**
+     * Daemon==============================
+     */
     public function Daemon(){
         $this->assign("DaemonList",(new ServersModel())->DaemonList());
 
@@ -29,5 +32,13 @@ class ServersController extends Controller{
 
     public function DaemonAdd(){
         echo (new ServersModel())->AddDaemon($_POST);
+    }
+
+    public function DaemonInfo(){
+        print_r((new ServersModel())->DaemonInfo($_POST));
+    }
+
+    public function DaemonUpdate(){
+        print_r((new ServersModel())->DaemonUpdate($_POST));
     }
 }

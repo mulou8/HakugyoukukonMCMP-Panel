@@ -6,6 +6,46 @@
                 <div class="box-body">
                     <?php echo $DaemonList?>
                 </div>
+
+                <script>
+                    function EditDaemon(id) {
+                        var messageBox = $(window.parent.document).find(".container-message");
+                        var message = $(window.parent.document).find("#message");
+
+                        message.html("加载中 请稍后");
+                        messageBox.fadeIn(200);
+
+                        $.post(
+                            "/Servers/DaemonInfo",
+                            "id=" + id,
+                            
+                            function (json_data) {
+
+                                var json = JSON.parse(json_data);
+
+                                var id = json.id;
+                                var name = json.name;
+                                var key = json.key;
+                                var fqdn = json.fqdn;
+                                var ajax = json.ajax_host;
+                                var OS_type = json.OS_type;
+
+                                $("#update-DaemonID").val(id);
+                                $("#update-name").val(name);
+                                $("#update-key").val(key);
+                                $("#update-fqdn").val(fqdn);
+                                $("#update-ajax").val(ajax);
+                                $("#update-select").val(OS_type);
+
+                                setTimeout(function () {
+                                    messageBox.fadeOut(200,"linear");
+                                },200);
+
+                                $("#daemon-info").show();
+                            }
+                        );
+                    }
+                </script>
             </div>
 
             <div class="container-edit">
@@ -17,21 +57,22 @@
                         <div class="box-body">
                             <p>选择一个Daemon来进行修改</p>
 
-                            <div class="daemon-info">
+                            <div class="daemon-info" id="daemon-info">
                                 <p>Daemon 名称</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="hidden" id="update-DaemonID">
+                                <input type="text" class="form-input" id="update-name">
 
                                 <p>连接密码</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="update-key">
 
                                 <p>IP/域名</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="update-fqdn">
 
                                 <p>Ajax 地址</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="update-ajax">
 
                                 <p>系统类型</p>
-                                <select class="form-input">
+                                <select id="update-select" class="form-input">
                                     <option value="Linux">Linux x64/84</option>
                                     <option value="Windows">Windows x64/84</option>
                                 </select>

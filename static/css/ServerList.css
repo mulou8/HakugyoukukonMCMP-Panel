@@ -1,3 +1,17 @@
+.daemon-list{
+    width: 96%;
+
+    margin:  0 auto;
+
+    padding-top: 10px;
+    padding-left: 6px;
+    padding-bottom: 5px;
+}
+
+.daemon-list:hover{
+    background-color: #414141;
+}
+
 .server-list{
     width: 96%;
 
