@@ -160,7 +160,7 @@ class HakugyokuSoulSql extends BootStrap{
         $con = @mysqli_connect($this->host,$this->username,$this->password,$this->db,$this->port);
 
         if(mysqli_connect_error()){
-            return("数据库连接失败");
+            return("-10");
         }
 
         mysqli_query($con, $sql);

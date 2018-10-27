@@ -11,10 +11,25 @@
 
 namespace application\controllers;
 
+use application\models\ServersModel;
 use HakugyokuSoulMVC\base\Controller;
 
 class ServersController extends Controller{
+    public function __construct($controller, $action, $urlParam)
+    {
+        parent::__construct($controller, $action, $urlParam);
+        (new ServersModel())->userVerification(@$_COOKIE['remember_token']);
+    }
+
     public function Daemon(){
         $this->rander();
+    }
+
+    public function DaemonAdd(){
+        echo (new ServersModel())->AddDaemon($_POST);
+    }
+
+    public function GetDaemon(){
+
     }
 }

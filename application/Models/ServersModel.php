@@ -14,7 +14,28 @@ namespace application\models;
 use HakugyokuSoulMVC\base\Model;
 
 class ServersModel extends Model{
-    public function AddDaemon(){
+    public function AddDaemon(array $url){
+        $url = array_values($url);
 
+        if (count($url) != 5){
+            return "-1";
+        }
+
+        for ($i = 0; $i < count($url); $i++){
+            if (@$url[$i] == "" || @$url[$i] == null || @$url[$i] ==  " "){
+                return "-1";
+            }
+        }
+
+        $name = $url[0];
+        $key = $url[1];
+        $fqdn = $url[2];
+        $ajaxHost = $url[3];
+        $OS_type = $url[4];
+
+        $this->setTable("daemon");
+        $this->insert(array("name","key","fqdn","ajax_host","OS_type"),array($name,$key,$fqdn,$ajaxHost,$OS_type));
+
+        return "0";
     }
 }

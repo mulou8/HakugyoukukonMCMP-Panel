@@ -41,7 +41,7 @@
 
                                 <div id="right">
                                     <button type="button" id="delete" class="btn btn-danger" style="margin-right: 6px;">删除Daemom</button>
-                                    <button type="button" id="delete" class="btn btn-primary">更新Daemom</button>
+                                    <button type="button" id="update" class="btn btn-primary">更新Daemom</button>
                                 </div>
                             </div>
                         </div>
@@ -56,25 +56,25 @@
 
                             <div class="daemon-info">
                                 <p>Daemon 名称</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="add-name">
 
                                 <p>连接密码</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="add-key">
 
                                 <p>IP/域名</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="add-fqdn">
 
                                 <p>Ajax 地址</p>
-                                <input type="text" class="form-input" id="name">
+                                <input type="text" class="form-input" id="add-ajax">
 
                                 <p>系统类型</p>
-                                <select class="form-input">
+                                <select class="form-input" id="os">
                                     <option value="Linux">Linux x64/84</option>
                                     <option value="Windows">Windows x64/84</option>
                                 </select>
 
                                 <div id="right">
-                                    <button type="button" id="delete" class="btn btn-success">添加Daemom</button>
+                                    <button type="button" id="add" class="btn btn-success">添加Daemom</button>
                                 </div>
                             </div>
                         </div>

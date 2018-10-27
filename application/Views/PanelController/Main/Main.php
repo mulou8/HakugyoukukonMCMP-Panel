@@ -1,4 +1,13 @@
-<body>
+<body id="body">
+
+<div class="container-message">
+    <div class="message-box">
+        <h2>提示:</h2>
+        <p id="message"></p>
+    </div>
+</div>
+
+
 
 <div class="tools">
     <div id="title">

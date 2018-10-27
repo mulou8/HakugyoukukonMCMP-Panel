@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/static/css/bootstrap.css">
         <link rel="stylesheet" href="/static/css/ServerList.css">
 
-        <script type="text/javascript" src="/static/js/jquery-3.2.1.js"></script>
+        <script src="/static/js/jquery-3.2.1.js"></script>
 
         <style type="text/css">
             body{
@@ -22,4 +22,51 @@
                 src: url('/static/fonts/FontAwesome.otf');
             }
         </style>
+
+        <script>
+            $(document).ready(function () {
+                $("#add").click(function () {
+                    var messageBox = $(window.parent.document).find(".container-message");
+                    var message = $(window.parent.document).find("#message");
+
+                    var name = $("#add-name").val();
+                    var key  = $("#add-key").val();
+                    var fqdn = $("#add-fqdn").val();
+                    var ajax = $("#add-ajax").val();
+                    var os = document.getElementById("os").options[document.getElementById("os").selectedIndex].value;
+
+                    $.post(
+                        "/Servers/DaemonAdd/",
+                        "name="+ name +"&key="+ key +"&fqdn="+ fqdn +"&ajax=" + ajax + "&os=" + os,
+
+                        function (data) {
+                              if (data == "0"){
+                                message.html("添加成功 请刷新本页面");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+
+                                    setTimeout(function () {
+                                        location.reload();
+                                    },420);
+                                },600);
+
+                                return;
+                              }
+
+                            if (data == "-1"){
+                                message.html("禁止空字段 请检查表单");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },600);
+                                return;
+                            }
+                        }
+                    );
+                });
+            });
+        </script>
 	</head>

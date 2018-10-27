@@ -1,0 +1,31 @@
+.message-box{
+    background-color: white;
+    border-radius: 10px;
+
+    padding-top: 6px;
+    padding-left: 20px;
+
+    height: 12%;
+    width: 22%;
+
+    position:fixed;
+    left: 39%;
+    top: 34%;
+}
+
+.container-message{
+    position:fixed;
+    left: 0;
+    top: 0;
+
+    background-color: rgba(2,2,2,0.5);
+
+    z-index: 999;
+
+    height: 100%;
+    width: 100%;
+}
+
+.message-box #message{
+    font-size: 16px;
+}

@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="/static/css/font-awesome.css"/>
 		<link rel="stylesheet" href="/static/css/SaigyoujiYuyuko.css"/>
 		<link rel="stylesheet" href="/static/css/jquery-ui.css"/>
+		<link rel="stylesheet" href="/static/css/Message-box.css"/>
 		<link rel="stylesheet" href="/static/css/Panel/Main.css"/>
 
         <link rel="shortcut icon" href="/static/png/SaigyoujiYuyuko/yoyoko.jpg"/>
@@ -20,7 +21,8 @@
 
 		<script src="/static/js/jquery-3.2.1.js"></script>
 		<script src="/static/js/jquery-ui.js"></script>
-		
+		<script src="/static/js/message-box.js"></script>
+
 		<style>
 		
 			body{
@@ -50,6 +52,8 @@
 
         <script>
             $(document).ready(function () {
+                $(".container-message").hide();
+
                 //tools高度自适应
                 var itmes_high = window.innerHeight - document.getElementById("title").scrollHeight - document.getElementsByClassName("com")[0].scrollHeight;
                 document.getElementsByClassName("itmes")[0].style.height = itmes_high;
