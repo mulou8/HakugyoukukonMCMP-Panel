@@ -38,4 +38,19 @@ class ServersModel extends Model{
 
         return "0";
     }
+
+    public function DaemonList(){
+        $this->setTable("daemon");
+        $arr = $this->searchFullArr("*","1=1");
+
+        $html = "";
+        for ($i = 0; $i < count($arr); $i++){
+            $html = $html."<div class=\"server-list\">";
+            $html = $html."<p>".$arr[$i][1]."</p>";
+            $html = $html."<p>".$arr[$i][3]."&nbsp;|&nbsp;OS:&nbsp;".$arr[$i][5]."&nbsp;x64/86</p>";
+            $html = $html."</div>";
+        }
+
+        return $html;
+    }
 }

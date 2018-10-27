@@ -22,14 +22,12 @@ class ServersController extends Controller{
     }
 
     public function Daemon(){
+        $this->assign("DaemonList",(new ServersModel())->DaemonList());
+
         $this->rander();
     }
 
     public function DaemonAdd(){
         echo (new ServersModel())->AddDaemon($_POST);
-    }
-
-    public function GetDaemon(){
-
     }
 }

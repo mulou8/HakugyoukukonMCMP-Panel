@@ -4,10 +4,7 @@
                 <div class="box-head">Daemon列表</div>
 
                 <div class="box-body">
-                    <div class="server-list">
-                        <p>qwq</p>
-                        <p>192.168.31.128:25565 | OS: Windows</p>
-                    </div>
+                    <?php echo $DaemonList?>
                 </div>
             </div>
 
