@@ -21,7 +21,7 @@ HakugyoukukonMCMP 拥有很多强大的功能，具体有哪些亮点呢？我�
 > 4. 内置 FTP 文件传输功能
 > 5. 支持 Docker 容器（通过命令调用方式启动容器 需要修改启动命令）
 > 6. 可以运行除了 Minecraft 以外的其他游戏服务器
-> 7.可以运行Shell命令
+> 7. 可以运行Shell命令
 
 ### 安全性
 本次HakugyoukukonMCMP 使用 BCrypt 加密。
