@@ -13,7 +13,15 @@ namespace HakugyokuSoulMVC\tools;
 
 class Version{
     public function getVersion(){
-        $json = file_get_contents("https://version.saigyoujiyuyuko.top:9000/MCSMP/Version.json");
+        $json = @file_get_contents("https://version.saigyoujiyuyuko.top:9000/MCSMP/Version.json");
+        if ($json == null){
+            $json = json_encode(array(
+                'Version'=>"? [Fail to get Version]",
+                'type'=>"N/A",
+                'ReleaseDate'=>"N/A"
+            ));
+        }
+
         $json = json_decode($json,true);
 
         return $json;

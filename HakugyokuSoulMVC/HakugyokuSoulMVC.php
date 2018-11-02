@@ -5,12 +5,14 @@ use HakugyokuSoulMVC\base\Controller;
 
 class HakugyokuSoulMVC {
 	protected $config;
-	
+	public static $timeStart;
+
 	function __construct($config) {
 		$this->config = parse_ini_file($config,true);
 	}
 	
 	public function run(){
+	    HakugyokuSoulMVC::$timeStart = microtime(true);
 		$this->isDebug();
 		$this->getConf();
 		$this->route();

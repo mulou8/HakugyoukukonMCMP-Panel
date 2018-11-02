@@ -128,6 +128,12 @@
                         return;
                     }
 
+                    if (name == "Cmd"){
+                        $("iframe").fadeIn(200);
+                        $("iframe").attr("src","/Servers/Console");
+                        return;
+                    }
+
                     if (name == "userManagement"){
                         $("iframe").fadeIn(200);
                         $("iframe").attr("src","/Panel/UserManagement");

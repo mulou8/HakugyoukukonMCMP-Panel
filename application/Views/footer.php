@@ -33,8 +33,12 @@
         </div>
 
         <hr>
-        <p style="font-size: 18px">© Copyright 2018 SaigyoujiYuyuko - All Rights Reserved</p>
-        <p>卖个萌~</p>
+        <p style="font-size: 18px;  display: inline-block; ">© Copyright 2018 SaigyoujiYuyuko - All Rights Reserved</p>
+        <div id="info-app" style="font-size: 18px; display: inline-block; position: absolute;right: 2%;">
+            <p><i class="fa fa-clock-o">&nbsp;:&nbsp;</i><?php echo USED?>s</p>
+            <p><i class="fa fa-code-fork">:&nbsp;</i>V<?php echo APP_VER?></p>
+        </div>
+
     </div>
 </div>
 </body>

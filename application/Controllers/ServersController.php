@@ -45,4 +45,13 @@ class ServersController extends Controller{
     public function DeleteDaemon(){
         print_r((new ServersModel())->DeleteDaemon($_POST));
     }
+
+
+    /**
+     * Server====================================
+     */
+
+    public function Server(){
+        $this->rander();
+    }
 }

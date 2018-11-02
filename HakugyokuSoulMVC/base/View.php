@@ -1,6 +1,8 @@
 <?php
 namespace HakugyokuSoulMVC\base;
 
+use HakugyokuSoulMVC\HakugyokuSoulMVC;
+
 class View {
 	protected $controller;
 	protected $action;
@@ -34,6 +36,7 @@ class View {
 		if(!is_file($controllerMain)){
 			exit("无法找到视图文件".$controllerMain);
 		}else{
+            define("USED",round(microtime(true) - HakugyokuSoulMVC::$timeStart,4));
 			include($controllerMain);
 		}
 		
@@ -43,5 +46,4 @@ class View {
 			include($controllerFooder);
 		}
 	}
-	
 }
