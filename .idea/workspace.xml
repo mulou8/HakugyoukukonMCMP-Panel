@@ -6,13 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705702d-295d-4399-a565-6fa297294d19" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/UuidMaker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/Version.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/Controllers/ServersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Controllers/ServersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/Models/ServersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Models/ServersModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/Views/ServersController/Server/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/ServersController/Server/Server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/ServersController/Server/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/ServersController/Server/header.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +111,7 @@
           <entry key="html" value="1" />
           <entry key="ini" value="2" />
           <entry key="js" value="7" />
-          <entry key="php" value="155" />
+          <entry key="php" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -124,7 +120,7 @@
           <entry key="HTML" value="1" />
           <entry key="Ini" value="2" />
           <entry key="JavaScript" value="7" />
-          <entry key="PHP" value="155" />
+          <entry key="PHP" value="157" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="htaccess" value="1" />
         </counts>
@@ -137,7 +133,7 @@
           <entry key="html" value="137" />
           <entry key="ini" value="68" />
           <entry key="js" value="218" />
-          <entry key="php" value="11465" />
+          <entry key="php" value="11645" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -146,7 +142,7 @@
           <entry key="HTML" value="137" />
           <entry key="Ini" value="68" />
           <entry key="JavaScript" value="218" />
-          <entry key="PHP" value="11464" />
+          <entry key="PHP" value="11644" />
           <entry key="PLAIN_TEXT" value="23" />
         </counts>
       </usages-collector>
@@ -155,9 +151,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/Controllers/ServersController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#235#271#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Server/Server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Server/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
+            <state relative-caret-position="985">
               <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
             </state>
           </provider>
@@ -166,8 +183,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/Models/ServersModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="207" column="30" lean-forward="true" selection-start-line="207" selection-start-column="30" selection-end-line="207" selection-end-column="30" />
+            <state relative-caret-position="719">
+              <caret line="219" column="5" lean-forward="true" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
               <folding>
                 <element signature="e#25#31#0" expanded="true" />
                 <element signature="e#32#38#0" expanded="true" />
@@ -175,9 +192,8 @@
                 <element signature="e#61#67#0" expanded="true" />
                 <element signature="e#14#20#0" expanded="true" />
                 <element signature="e#34#40#0" expanded="true" />
-                <element signature="e#25#31#0" expanded="true" />
-                <element signature="e#32#38#0" expanded="true" />
                 <element signature="e#41#47#0" expanded="true" />
+                <element signature="e#48#54#0" expanded="true" />
                 <element signature="e#61#67#0" expanded="true" />
               </folding>
             </state>
@@ -272,12 +288,12 @@
         <option value="$PROJECT_DIR$/HakugyokuSoulMVC/base/View.php" />
         <option value="$PROJECT_DIR$/static/css/Panel/Main.css" />
         <option value="$PROJECT_DIR$/application/Views/footer.php" />
-        <option value="$PROJECT_DIR$/application/Views/ServersController/Server/Server.php" />
-        <option value="$PROJECT_DIR$/application/Controllers/ServersController.php" />
         <option value="$PROJECT_DIR$/static/js/message-box.js" />
         <option value="$PROJECT_DIR$/HakugyokuSoulMVC/tools/Version.php" />
         <option value="$PROJECT_DIR$/HakugyokuSoulMVC/tools/UuidMaker.php" />
         <option value="$PROJECT_DIR$/application/Views/ServersController/Server/header.php" />
+        <option value="$PROJECT_DIR$/application/Controllers/ServersController.php" />
+        <option value="$PROJECT_DIR$/application/Views/ServersController/Server/Server.php" />
         <option value="$PROJECT_DIR$/application/Models/ServersModel.php" />
       </list>
     </option>
@@ -531,18 +547,18 @@
       <workItem from="1540597564469" duration="33964000" />
       <workItem from="1540655368881" duration="632000" />
       <workItem from="1540692190171" duration="3027000" />
-      <workItem from="1541154661122" duration="10915000" />
+      <workItem from="1541154661122" duration="11826000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161139000" />
+    <option name="totallyTimeSpent" value="162050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13006397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -851,23 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/Controllers/ServersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding>
-            <element signature="e#235#271#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Server/Server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Daemon/Daemon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="798">
@@ -882,17 +881,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/Controllers/ServersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#235#271#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Server/Server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/Views/ServersController/Server/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="985">
           <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/Models/ServersModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="207" column="30" lean-forward="true" selection-start-line="207" selection-start-column="30" selection-end-line="207" selection-end-column="30" />
+        <state relative-caret-position="719">
+          <caret line="219" column="5" lean-forward="true" selection-start-line="219" selection-start-column="5" selection-end-line="219" selection-end-column="5" />
           <folding>
             <element signature="e#25#31#0" expanded="true" />
             <element signature="e#32#38#0" expanded="true" />
@@ -900,9 +916,8 @@
             <element signature="e#61#67#0" expanded="true" />
             <element signature="e#14#20#0" expanded="true" />
             <element signature="e#34#40#0" expanded="true" />
-            <element signature="e#25#31#0" expanded="true" />
-            <element signature="e#32#38#0" expanded="true" />
             <element signature="e#41#47#0" expanded="true" />
+            <element signature="e#48#54#0" expanded="true" />
             <element signature="e#61#67#0" expanded="true" />
           </folding>
         </state>

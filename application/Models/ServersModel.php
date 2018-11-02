@@ -175,8 +175,6 @@ class ServersModel extends Model{
         }
 
         //条件判断
-
-        //端口
         $this->setTable("servers");
         $daemon_id = $url[7];
         $port = $url[5];
@@ -189,10 +187,15 @@ class ServersModel extends Model{
 
         $uuid = $this->makeUUID();
 
+        //获取daemon-ip
+        $this->setTable("daemon");
+        $ip = $this->searchContant("fqdn","id='".$url[7]."'");
+
+        $this->setTable("servers");
 
         $this->insert(
-            array("uuid","name","daemon_id","uuid_short","port","max_memory","run_cmd","stop_cmd","jar_name","ftp_pass"),
-            array($uuid[0],$url[0],$url[7],$uuid[1],$url[5],$url[1],$url[3],$url[4],$url[2],$url[6])
+            array("uuid","name","daemon_id","uuid_short","port","max_memory","run_cmd","stop_cmd","jar_name","ftp_pass","daemon_ip"),
+            array($uuid[0],$url[0],$url[7],$uuid[1],$url[5],$url[1],$url[3],$url[4],$url[2],$url[6],$ip)
         );
 
         return "0";
@@ -208,8 +211,8 @@ class ServersModel extends Model{
             $id = $arr[$i][0];
 
             $html = $html."<div class=\"daemon-list\" onclick='EditServer($id);'>";
-            $html = $html."<p>ID:&nbsp;".$arr[$i][1]."&nbsp;名称: ".$arr[$i][3]."</p>";
-            $html = $html."<p>".$arr[$i][3]."&nbsp;|&nbsp;OS:&nbsp;".$arr[$i][5]."&nbsp;x64/86</p>";
+            $html = $html."<p>ID:&nbsp;".$arr[$i][0]."&nbsp;名称: ".$arr[$i][3]."</p>";
+            $html = $html."<p>".$arr[$i][11].":".$arr[$i][5]."&nbsp;|&nbsp;Memory:&nbsp;".$arr[$i][6]."MB</p>";
             $html = $html."</div>";
         }
 

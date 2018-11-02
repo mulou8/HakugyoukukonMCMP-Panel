@@ -4,7 +4,7 @@
                 <div class="box-head">服务器列表</div>
 
                 <div class="box-body">
-
+                    <?php echo $ServerList?>
                 </div>
             </div>
 

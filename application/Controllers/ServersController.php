@@ -53,6 +53,7 @@ class ServersController extends Controller{
 
     public function Server(){
         $this->assign("daemon",((new ServersModel())->GetDaemon()));
+        $this->assign("ServerList",(new ServersModel())->GetServer());
 
         $this->rander();
     }
