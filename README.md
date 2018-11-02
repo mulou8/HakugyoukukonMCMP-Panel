@@ -40,5 +40,5 @@ HakugyoukukonMCMP 使用Java Daemon 加标准输入输出。
 > 2. 基本的功能实现
 
 ### 后续
-> 。。。懒得写了。。Markdown真麻烦。。。
+>。。。懒得写了。。Markdown真麻烦。。。
 > 。。。这个文档是抄Nico的啦  怪麻烦的。。。
