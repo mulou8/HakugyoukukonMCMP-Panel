@@ -74,7 +74,7 @@ class ServersModel extends Model{
         return $json;
     }
 
-    
+
     public function DaemonUpdate(array $url){
         $url = array_values($url);
 
@@ -101,6 +101,7 @@ class ServersModel extends Model{
         return "0";
     }
 
+
     public function DeleteDaemon(array $url){
         $id = @$url['id'];
 
@@ -119,5 +120,99 @@ class ServersModel extends Model{
         $this->delete("id=$id");
 
         return 0;
+    }
+
+
+    /**
+     * @param array $url
+     * @return string
+     *
+     * Server==============================
+     */
+
+    public function GetDaemon(){
+        $this->setTable("daemon");
+        $arr = $this->searchFullArr("*","1=1");
+
+        $html = "";
+        for ($i = 0; $i < count($arr); $i++){
+            $id = $arr[$i][0];
+            $name = $arr[$i][1];
+            $ip = $html.$arr[$i][3];
+
+            $html = $html."<option id='$id'>";
+            $html = $html."$name&nbsp;($ip)";
+            $html = $html."</option>";
+        }
+
+        return $html;
+    }
+
+
+    public function ServerAdd(array $url){
+        $url = array_values($url);
+
+        if (count($url) != 8){
+            return "-1";
+        }
+
+        for ($i = 0; $i < count($url); $i++){
+            if (@$url[$i] == "" || @$url[$i] == null || @$url[$i] ==  " "){
+                return "-1";
+            }
+        }
+
+        if (is_numeric($url[1]) == false){
+            return "-2";
+        }
+
+        if (is_numeric($url[5]) == false){
+            return "-2";
+        }
+
+        if ($url[5] <= 1 || $url[5] > 65534){
+            return "-4";
+        }
+
+        //条件判断
+
+        //端口
+        $this->setTable("servers");
+        $daemon_id = $url[7];
+        $port = $url[5];
+
+        $row = $this->searchRow("*","daemon_id='$daemon_id' AND port='$port'");
+
+        if ($row >= 1){
+            return "-3";
+        }
+
+        $uuid = $this->makeUUID();
+
+
+        $this->insert(
+            array("uuid","name","daemon_id","uuid_short","port","max_memory","run_cmd","stop_cmd","jar_name","ftp_pass"),
+            array($uuid[0],$url[0],$url[7],$uuid[1],$url[5],$url[1],$url[3],$url[4],$url[2],$url[6])
+        );
+
+        return "0";
+    }
+
+
+    public function GetServer(){
+        $this->setTable("servers");
+        $arr = $this->searchFullArr("*","1=1");
+
+        $html = "";
+        for ($i = 0; $i < count($arr); $i++){
+            $id = $arr[$i][0];
+
+            $html = $html."<div class=\"daemon-list\" onclick='EditServer($id);'>";
+            $html = $html."<p>ID:&nbsp;".$arr[$i][1]."&nbsp;名称: ".$arr[$i][3]."</p>";
+            $html = $html."<p>".$arr[$i][3]."&nbsp;|&nbsp;OS:&nbsp;".$arr[$i][5]."&nbsp;x64/86</p>";
+            $html = $html."</div>";
+        }
+
+        return $html;
     }
 }

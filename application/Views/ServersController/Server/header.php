@@ -31,15 +31,18 @@
                     var messageBox = $(window.parent.document).find(".container-message");
                     var message = $(window.parent.document).find("#message");
 
-                    var name = $("#add-name").val();
-                    var key  = $("#add-key").val();
-                    var fqdn = $("#add-fqdn").val();
-                    var ajax = $("#add-ajax").val();
-                    var os = document.getElementById("os").options[document.getElementById("os").selectedIndex].value;
+                    var name = $("#server-name").val();
+                    var memory = $("#server-memory").val();
+                    var core = $("#core-name").val();
+                    var start = $("#start-cmd").val();
+                    var stop = $("#stop-cmd").val();
+                    var port = $("#server-port").val();
+                    var pass = $("#ftp-pass").val();
+                    var daemon = document.getElementById("daemon").options[document.getElementById("daemon").selectedIndex].id;
 
                     $.post(
-                        "/Servers/DaemonAdd/",
-                        "name="+ name +"&key="+ key +"&fqdn="+ fqdn +"&ajax=" + ajax + "&os=" + os,
+                        "/Servers/ServerAdd/",
+                        "name="+ name +"&memory="+ memory +"&core="+ core +"&start=" + start + "&stop=" + stop + "&port=" + port + "&pass=" + pass + "&daemon=" + daemon,
 
                         function (data) {
                               if (data == "0"){
@@ -52,7 +55,7 @@
                                     setTimeout(function () {
                                         location.reload();
                                     },420);
-                                },600);
+                                },500);
 
                                 return;
                               }
@@ -63,9 +66,45 @@
                                 messageBox.fadeIn(400);
                                 setTimeout(function () {
                                     messageBox.fadeOut(400,"linear");
-                                },600);
+                                },800);
                                 return;
                             }
+
+                            if (data == "-2"){
+                                message.html("最大内存 或 端口 必须为数字");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            if (data == "-3"){
+                                message.html("相同 daemon+端口 的服务器已存在");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            if (data == "-4"){
+                                message.html("服务器端口必须 大于1 小于65534");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            message.html("未知错误: " + data + " 请联系开发者");
+                            messageBox.fadeIn(400);
+                            setTimeout(function () {
+                                messageBox.fadeOut(400,"linear");
+                            },1000);
                         }
                     );
                 });

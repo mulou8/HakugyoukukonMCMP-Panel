@@ -22,57 +22,51 @@
                                 <input type="hidden" id="update-DaemonID">
                                 <input type="text" class="form-input" id="update-name">
 
-                                <p>连接密码</p>
-                                <input type="text" class="form-input" id="update-key">
-
-                                <p>IP/域名</p>
-                                <input type="text" class="form-input" id="update-fqdn">
-
-                                <p>Ajax 地址</p>
-                                <input type="text" class="form-input" id="update-ajax">
-
-                                <p>系统类型</p>
-                                <select id="update-select" class="form-input">
-                                    <option value="Linux">Linux x64/84</option>
-                                    <option value="Windows">Windows x64/84</option>
-                                </select>
-
                                 <div id="right">
-                                    <button type="button" id="delete" class="btn btn-danger" style="margin-right: 6px;">删除Daemom</button>
-                                    <button type="button" id="update" class="btn btn-primary">更新Daemom</button>
+                                    <button type="button" id="delete" class="btn btn-danger" style="margin-right: 6px;">删除服务器</button>
+                                    <button type="button" id="update" class="btn btn-primary">更新服务器</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
                 <div class="add-daemon">
                     <div class="box">
-                        <div class="box-head">添加Daemon</div>
+                        <div class="box-head">添加服务器</div>
 
                         <div class="box-body">
 
                             <div class="daemon-info">
-                                <p>Daemon 名称</p>
-                                <input type="text" class="form-input" id="add-name">
+                                <p>服务器名称</p>
+                                <input type="text" class="form-input" id="server-name" placeholder="MyServer">
 
-                                <p>连接密码</p>
-                                <input type="text" class="form-input" id="add-key">
-
-                                <p>IP/域名</p>
-                                <input type="text" class="form-input" id="add-fqdn">
-
-                                <p>Ajax 地址</p>
-                                <input type="text" class="form-input" id="add-ajax">
-
-                                <p>系统类型</p>
-                                <select class="form-input" id="os">
-                                    <option value="Linux">Linux x64/84</option>
-                                    <option value="Windows">Windows x64/84</option>
+                                <p>选择 Daemon</p>
+                                <select class="form-input" id="daemon">
+                                    <?php echo $daemon?>
                                 </select>
 
+                                <p>最大内存(mb)</p>
+                                <input type="text" class="form-input" id="server-memory" placeholder="1024">
+
+                                <p>核心文件名字</p>
+                                <input type="text" class="form-input" id="core-name" placeholder="Spigot.jar">
+
+                                <p>启动命令</p>
+                                <input type="text" class="form-input" id="start-cmd" value="java -Xmx{maxram}M -Xms128M -jar {jar}">
+
+                                <p>停止命令</p>
+                                <input type="text" class="form-input" id="stop-cmd" value="stop">
+
+                                <p>服务器端口</p>
+                                <input type="text" class="form-input" id="server-port" placeholder="25565">
+
+                                <p>服务器 FTP 密码</p>
+                                <input type="text" class="form-input" id="ftp-pass" placeholder="123123">
+
                                 <div id="right">
-                                    <button type="button" id="add" class="btn btn-success">添加Daemom</button>
+                                    <button type="button" id="add" class="btn btn-success">添加服务器</button>
                                 </div>
                             </div>
                         </div>

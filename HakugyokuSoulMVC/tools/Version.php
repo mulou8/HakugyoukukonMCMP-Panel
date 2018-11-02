@@ -10,8 +10,11 @@
  */
 
 namespace HakugyokuSoulMVC\tools;
+use HakugyokuSoulMVC\tools\UuidMaker;
 
-class Version{
+include_once APP_PATH."HakugyokuSoulMVC/tools/UuidMaker.php";
+
+class Version extends UuidMaker{
     public function getVersion(){
         $json = @file_get_contents("https://version.saigyoujiyuyuko.top:9000/MCSMP/Version.json");
         if ($json == null){
