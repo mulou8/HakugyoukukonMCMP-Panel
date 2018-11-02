@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d705702d-295d-4399-a565-6fa297294d19" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/application/Views/ServersController/Server/Server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/Views/ServersController/Server/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakugyokuSoulMVC/HakugyokuSoulMVC.php" beforeDir="false" afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/HakugyokuSoulMVC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakugyokuSoulMVC/base/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/base/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/HakugyokuSoulMVC/tools/Version.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Controllers/ServersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Controllers/ServersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/PanelController/Main/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/PanelController/Main/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/Views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Views/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Main/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Main/Main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Panel/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/Panel/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -559,12 +549,12 @@
       <workItem from="1540597564469" duration="33964000" />
       <workItem from="1540655368881" duration="632000" />
       <workItem from="1540692190171" duration="3027000" />
-      <workItem from="1541154661122" duration="3185000" />
+      <workItem from="1541154661122" duration="3784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153409000" />
+    <option name="totallyTimeSpent" value="154008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
