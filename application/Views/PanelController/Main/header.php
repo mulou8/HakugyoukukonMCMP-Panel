@@ -130,7 +130,7 @@
 
                     if (name == "Cmd"){
                         $("iframe").fadeIn(200);
-                        $("iframe").attr("src","/Servers/Console");
+                        $("iframe").attr("src","/Console/Main");
                         return;
                     }
 

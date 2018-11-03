@@ -241,7 +241,7 @@
                                 }
 
                                 if (data == "-1"){
-                                    message.html("错误: 无法获取ServerID 请联系开发者");
+                                    message.html("错误: 无法获取服务器ID 请联系开发者");
 
                                     messageBox.fadeIn(400);
                                     setTimeout(function () {
