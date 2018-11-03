@@ -31,28 +31,28 @@
             </li>
 
             <li id="home" class="use">
-                <p class="fa fa-home"></p>&nbsp;<?php echo $home?>
+                <p class="fa fa-home"></p>&nbsp;&nbsp;<?php echo $home?>
             </li>
 
             <li id="systemInfo" class="use">
-                <p class="fa fa-dashboard"></p>&nbsp;<?php echo $systemInfo?>
+                <p class="fa fa-dashboard"></p>&nbsp;&nbsp;<?php echo $systemInfo?>
             </li>
 
             <li id="Cmd" class="use">
-                <p class="fa fa-terminal"></p>&nbsp;&nbsp;<?php echo $terminal?>
+                <p class="fa fa-terminal"></p>&nbsp;&nbsp;&nbsp;<?php echo $terminal?>
             </li>
 
             <li id="Server" class="use">
-                <p class="fa fa-server"></p>&nbsp;<?php echo $ServerManagement?>
+                <p class="fa fa-server"></p>&nbsp;&nbsp;<?php echo $ServerManagement?>
             </li>
 
             <li id="Daemon" class="use">
-                <p class="fa fa-cubes"></p>&nbsp;<?php echo $DaemonManagement?>
+                <p class="fa fa-cubes"></p>&nbsp;&nbsp;<?php echo $DaemonManagement?>
             </li>
 
 
             <li id="userManagement" class="use">
-                <p class="fa fa-users"></p>&nbsp;<?php echo $userManagement?>
+                <p class="fa fa-users"></p>&nbsp;&nbsp;<?php echo $userManagement?>
             </li>
         </ul>
     </div>
