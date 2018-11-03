@@ -43,7 +43,7 @@
                                 },200);
 
                                 $("#daemon-info").show();
-                            }
+                            },
 
                             error: function (err,text) {
                                 message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");

@@ -116,18 +116,23 @@
                     var messageBox = $(window.parent.document).find(".container-message");
                     var message = $(window.parent.document).find("#message");
 
-                    var id = $("#update-DaemonID").val();
+                    var id = $("#update-id").val();
                     var name = $("#update-name").val();
-                    var key  = $("#update-key").val();
-                    var fqdn = $("#update-fqdn").val();
-                    var ajax = $("#update-ajax").val();
-                    var os = document.getElementById("update-select").options[document.getElementById("update-select").selectedIndex].value;
+                    var memory = $("#update-memory").val();
+                    var core = $("#update-core").val();
+                    var start = $("#update-start").val();
+                    var stop = $("#update-stop").val();
+                    var port = $("#update-port").val();
 
-                    $.post(
-                        "/Servers/DaemonUpdate/",
-                        "name="+ name +"&key="+ key +"&fqdn="+ fqdn +"&ajax=" + ajax + "&os=" + os + "&id=" + id,
-
-                        function (data) {
+                    $.ajax({
+                        url: "/Servers/ServerUpdate",
+                        async: true,
+                        processData: false,
+                        type: "POST",
+                        timeout: 4000,
+                        data: "id=" + id +"&name="+ name +"&memory="+ memory +"&core="+ core +"&start=" + start + "&stop=" + stop + "&port=" + port,
+                        
+                        success: function (data) {
                             if (data == "0"){
                                 message.html("更新成功 请刷新本页面");
 
@@ -155,8 +160,53 @@
 
                             }
 
+                            if (data == "-2"){
+                                message.html("最大内存 或 端口 必须为数字");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            if (data == "-3"){
+                                message.html("相同 daemon+端口 的服务器已存在");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            if (data == "-4"){
+                                message.html("服务器端口必须 大于1 小于65534");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
+                            message.html("未知错误:" + data);
+
+                            messageBox.fadeIn(400);
+                            setTimeout(function () {
+                                messageBox.fadeOut(400,"linear");
+                            },800);
+                            return;
+                        },
+                        
+                        error: function (err,text) {
+                            message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");
+
+                            setTimeout(function () {
+                                messageBox.fadeOut(200,"linear");
+                            },600);
                         }
-                    );
+                    });
                 });
 
                 $("#delete").click(function () {

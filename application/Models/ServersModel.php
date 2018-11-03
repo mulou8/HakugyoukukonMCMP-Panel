@@ -236,4 +236,37 @@ class ServersModel extends Model{
 
         return $json;
     }
+
+    public function ServerUpdate(array $url){
+        $urlNum = array_values($url);
+
+        if (count($urlNum) != 7){
+            return "-1";
+        }
+
+        for ($i = 0; $i < count($urlNum); $i++){
+            if (@$urlNum[$i] == "" || @$urlNum[$i] == null || @$urlNum[$i] ==  " "){
+                return "-1";
+            }
+        }
+
+        if (is_numeric($url["port"]) == false){
+            return "-2";
+        }
+
+        if (is_numeric($url["memory"]) == false){
+            return "-2";
+        }
+
+        if ($url["port"] <= 1 || $url["port"] > 65534){
+            return "-4";
+        }
+
+        $id = $url['id'];
+
+        $this->setTable("servers");
+        $this->upDate("id=$id",array("name","port","max_memory","run_cmd","stop_cmd","jar_name"),array($url['name'],$url['port'],$url['memory'],$url['start'],$url['stop'],$url['core']));
+
+        return "0";
+    }
 }
