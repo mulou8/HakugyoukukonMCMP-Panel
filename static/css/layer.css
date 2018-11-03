@@ -1,0 +1,13 @@
+.form-input{
+    border: 0px;
+    border-bottom: 1px solid #545454;
+    padding-left: 3px;
+    outline: none;
+    height: 32px;
+    background: #1d1d1d ! important;
+    width: 98% ;
+}
+
+.form-input:focus{
+    border-bottom-color: white;
+}

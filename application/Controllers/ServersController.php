@@ -15,8 +15,7 @@ use application\models\ServersModel;
 use HakugyokuSoulMVC\base\Controller;
 
 class ServersController extends Controller{
-    public function __construct($controller, $action, $urlParam)
-    {
+    public function __construct($controller, $action, $urlParam){
         parent::__construct($controller, $action, $urlParam);
         (new ServersModel())->userVerification(@$_COOKIE['remember_token']);
     }

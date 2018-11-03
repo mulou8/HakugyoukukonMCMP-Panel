@@ -1,0 +1,26 @@
+<?php
+/**
+ * ProjectName: HakugyokuSoulMcServerPanel.
+ * Author: SaigyoujiYuyuko
+ * QQ: 3558168775
+ * Date: 2018/11/3
+ * Time: 19:44
+ *
+ * Copyright © 2018 SaigyoujiYuyuko. All rights reserved.
+ */
+
+namespace application\controllers;
+
+use HakugyokuSoulMVC\base\Controller;
+use application\models\ConsoleModel;
+
+class ConsoleController extends Controller{
+    public function __construct($controller, $action, $urlParam){
+        parent::__construct($controller, $action, $urlParam);
+        (new ConsoleModel())->userVerification(@$_COOKIE['remember_token']);
+    }
+
+    public function Main(){
+        $this->rander();
+    }
+}
