@@ -26,7 +26,9 @@ class View {
 		$controllerHeader = APP_PATH."application/Views/".$this->controller."/".$this->action."/header.php";
 		$controllerFooder = APP_PATH."application/Views/".$this->controller."/".$this->action."/footer.php";
 		$controllerMain = APP_PATH."application/Views/".$this->controller."/".$this->action."/".$this->action.".php";
-		
+
+        define("USED",round(microtime(true) - HakugyokuSoulMVC::$timeStart,4));
+
 		if(!is_file($controllerHeader)){
 			include($defaultHeader);
 		}else{
@@ -36,7 +38,6 @@ class View {
 		if(!is_file($controllerMain)){
 			exit("无法找到视图文件".$controllerMain);
 		}else{
-            define("USED",round(microtime(true) - HakugyokuSoulMVC::$timeStart,4));
 			include($controllerMain);
 		}
 		

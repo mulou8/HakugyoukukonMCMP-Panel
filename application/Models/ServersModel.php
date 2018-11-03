@@ -67,6 +67,10 @@ class ServersModel extends Model{
     public function DaemonInfo($url){
         $id = $url['id'];
 
+        if ($url['id'] == null){
+            return "-1";
+        }
+
         $this->setTable("daemon");
         $json = $this->searchArr("*","id=$id");
         $json = json_encode($json);
@@ -217,5 +221,19 @@ class ServersModel extends Model{
         }
 
         return $html;
+    }
+
+    public function ServerInfo(array $url){
+        if ($url['id'] == null){
+            return "-1";
+        }
+
+        $id = $url['id'];
+
+        $this->setTable("servers");
+        $json = $this->searchArr("*","id=$id");
+        $json = json_encode($json);
+
+        return $json;
     }
 }

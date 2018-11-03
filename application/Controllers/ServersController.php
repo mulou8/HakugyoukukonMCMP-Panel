@@ -61,4 +61,8 @@ class ServersController extends Controller{
     public function ServerAdd(){
         print_r((new ServersModel())->ServerAdd($_POST));
     }
+
+    public function ServerInfo(){
+        print_r((new ServersModel())->ServerInfo($_POST));
+    }
 }

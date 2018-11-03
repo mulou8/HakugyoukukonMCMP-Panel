@@ -3,10 +3,6 @@
             <div class="box">
                 <div class="box-head">Daemon列表</div>
 
-                <div class="box-body">
-                    <?php echo $DaemonList?>
-                </div>
-
                 <script>
                     function EditDaemon(id) {
                         var messageBox = $(window.parent.document).find(".container-message");
@@ -15,11 +11,15 @@
                         message.html("加载中 请稍后");
                         messageBox.fadeIn(200);
 
-                        $.post(
-                            "/Servers/DaemonInfo",
-                            "id=" + id,
-                            
-                            function (json_data) {
+                        $.ajax({
+                            url: "/Servers/DaemonInfo",
+                            async: true,
+                            processData: false,
+                            type: "POST",
+                            timeout: 4000,
+                            data: "id=" + id,
+
+                            success: function (json_data) {
 
                                 var json = JSON.parse(json_data);
 
@@ -42,10 +42,25 @@
                                 },200);
 
                                 $("#daemon-info").show();
+                            },
+                            
+                            error: function (err,text) {
+                                message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");
+
+                                setTimeout(function () {
+                                    messageBox.fadeOut(200,"linear");
+                                },600);
                             }
-                        );
+
+
+                        });
                     }
                 </script>
+
+                <div class="box-body">
+                    <?php echo $DaemonList?>
+                </div>
+
             </div>
 
             <div class="container-edit">

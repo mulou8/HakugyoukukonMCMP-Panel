@@ -8,4 +8,12 @@
 		<link rel="stylesheet" href="/static/css/Panel/SystemInfo.css"/>
         <link rel="stylesheet" href="/static/css/Black.css">
         <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+        <script type="text/javascript" src="/static/js/jquery-3.2.1.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#time_used",window.parent.document).html(<?php echo USED?>);
+            });
+        </script>
 	</head>

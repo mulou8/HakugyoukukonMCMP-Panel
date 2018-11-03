@@ -25,6 +25,8 @@
 
         <script>
             $(document).ready(function () {
+                $("#time_used",window.parent.document).html(<?php echo USED?>);
+
                 $("#daemon-info").hide();
 
                 $("#add").click(function () {
