@@ -213,14 +213,18 @@
                     var messageBox = $(window.parent.document).find(".container-message");
                     var message = $(window.parent.document).find("#message");
 
-                    var id = $("#update-DaemonID").val();
+                    var id = $("#update-id").val();
 
-                    if(confirm("您确定要删除此Daemon吗\n注意: 此操作不可逆")) {
-                        $.post(
-                            "/Servers/DeleteDaemon",
-                            "id=" + id,
+                    if(confirm("您确定要删除此服务器吗\n注意: 此操作不可逆")) {
+                        $.ajax({
+                            url: "/Servers/DeleteServer",
+                            async: true,
+                            processData: false,
+                            type: "POST",
+                            timeout: 4000,
+                            data: "id=" + id,
 
-                            function (data) {
+                            success: function (data) {
                                 if (data == "0"){
                                     message.html("删除成功 请刷新本页面");
 
@@ -231,23 +235,13 @@
                                         setTimeout(function () {
                                             location.reload();
                                         },420);
-                                    },700);
-
-                                    return;
-                                }
-
-                                if (data == "-2"){
-                                    message.html("此Daemon上搭载着服务器 无法删除");
-
-                                    messageBox.fadeIn(400);
-                                    setTimeout(function () {
-                                        messageBox.fadeOut(400,"linear");
                                     },600);
+
                                     return;
                                 }
 
                                 if (data == "-1"){
-                                    message.html("错误: 无法获取DaemonID 请联系开发者");
+                                    message.html("错误: 无法获取ServerID 请联系开发者");
 
                                     messageBox.fadeIn(400);
                                     setTimeout(function () {
@@ -262,8 +256,16 @@
                                 setTimeout(function () {
                                     messageBox.fadeOut(400,"linear");
                                 },800);
+                            },
+
+                            error: function (err,text) {
+                                message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");
+
+                                setTimeout(function () {
+                                    messageBox.fadeOut(200,"linear");
+                                },600);
                             }
-                        );
+                        });
                     }
                 });
 

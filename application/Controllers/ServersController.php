@@ -69,4 +69,8 @@ class ServersController extends Controller{
     public function ServerUpdate(){
         print_r((new ServersModel())->ServerUpdate($_POST));
     }
+
+    public function DeleteServer(){
+        print_r((new ServersModel())->DeleteServer($_POST));
+    }
 }

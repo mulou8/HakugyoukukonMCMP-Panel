@@ -237,6 +237,10 @@ class ServersModel extends Model{
         return $json;
     }
 
+    /**
+     * @param array $url
+     * @return string
+     */
     public function ServerUpdate(array $url){
         $urlNum = array_values($url);
 
@@ -267,6 +271,25 @@ class ServersModel extends Model{
         $this->setTable("servers");
         $this->upDate("id=$id",array("name","port","max_memory","run_cmd","stop_cmd","jar_name"),array($url['name'],$url['port'],$url['memory'],$url['start'],$url['stop'],$url['core']));
 
+        return "0";
+    }
+
+
+    public function DeleteServer(array $url){
+        if ($url['id'] == null || $url['id'] == "undefined"){
+            return "-1";
+        }
+
+        //删除数据库里面的服务器
+        $this->setTable("servers");
+        $this->delete("id='".$url['id']."'");
+
+        /**
+         * 重头戏!   远程Daemon删除服务器
+         */
+
+
+        //返回yes!
         return "0";
     }
 }
