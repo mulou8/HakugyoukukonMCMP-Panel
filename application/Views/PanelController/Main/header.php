@@ -7,7 +7,6 @@
 		<meta name="renderer" content="ie-stand">
 		
 		<link rel="stylesheet" href="/static/css/bootstrap.css"/>
-		<link rel="stylesheet" href="/static/css/bootstrap-theme.css"/>
 		<link rel="stylesheet" href="/static/css/bootbutton.css"/>
 		<link rel="stylesheet" href="/static/css/font-awesome.css"/>
 		<link rel="stylesheet" href="/static/css/SaigyoujiYuyuko.css"/>

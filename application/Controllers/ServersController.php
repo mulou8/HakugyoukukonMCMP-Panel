@@ -34,15 +34,15 @@ class ServersController extends Controller{
     }
 
     public function DaemonInfo(){
-        print_r((new ServersModel())->DaemonInfo($_POST));
+        echo((new ServersModel())->DaemonInfo($_POST));
     }
 
     public function DaemonUpdate(){
-        print_r((new ServersModel())->DaemonUpdate($_POST));
+        echo((new ServersModel())->DaemonUpdate($_POST));
     }
 
     public function DeleteDaemon(){
-        print_r((new ServersModel())->DeleteDaemon($_POST));
+        echo((new ServersModel())->DeleteDaemon($_POST));
     }
 
 
@@ -58,18 +58,18 @@ class ServersController extends Controller{
     }
 
     public function ServerAdd(){
-        print_r((new ServersModel())->ServerAdd($_POST));
+        echo((new ServersModel())->ServerAdd($_POST));
     }
 
     public function ServerInfo(){
-        print_r((new ServersModel())->ServerInfo($_POST));
+        echo((new ServersModel())->ServerInfo($_POST));
     }
 
     public function ServerUpdate(){
-        print_r((new ServersModel())->ServerUpdate($_POST));
+        echo((new ServersModel())->ServerUpdate($_POST));
     }
 
     public function DeleteServer(){
-        print_r((new ServersModel())->DeleteServer($_POST));
+        echo((new ServersModel())->DeleteServer($_POST));
     }
 }

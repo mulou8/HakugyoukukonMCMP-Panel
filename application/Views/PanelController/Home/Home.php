@@ -13,7 +13,7 @@
                         <div class="small-box-title"><i class="fa fa-cubes" style="font-size: 30px;"></i><br><strong><?php echo $DeamonNumber?></strong></div>
 
                         <div class="small-box-body" id="times">
-                            0
+                            <?php echo $daemon?>
                         </div>
                     </div>
 
@@ -21,7 +21,7 @@
                         <div class="small-box-title"><i class="fa fa-server" style="font-size: 30px;"></i><br><strong><?php echo $McServerNumber?></strong></div>
 
                         <div class="small-box-body" id="times">
-                            0
+                            <?php echo $servers?>
                         </div>
                     </div>
 

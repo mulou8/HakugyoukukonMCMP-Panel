@@ -34,6 +34,12 @@ video {
   display: inline-block;
   vertical-align: baseline;
 }
+
+::selection {
+  background: rgba(255,134,184,0.8);
+  color: #FFF;
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;

@@ -23,5 +23,11 @@
                 src: url('/static/fonts/FontAwesome.otf');
             }
         </style>
+
+        <script>
+            $(document).ready(function () {
+                $("#time_used",window.parent.document).html(<?php echo USED?>);
+            });
+        </script>
 	</head>
     <body>

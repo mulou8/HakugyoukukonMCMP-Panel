@@ -30,6 +30,15 @@ class PanelModel extends Model{
         $this->setTable("failure_token_data");
         $info['login']['AuthenticationFailure'] = $this->searchRow("*","1=1");
 
+        //Server数量
+        $this->setTable("servers");
+        $info['server']['number'] = $this->searchRow("*","1=1");
+
+        //Daemon数量
+        $this->setTable("daemon");
+        $info['daemon']['number'] = $this->searchRow("*","1=1");
+
+
 
         /**
          * 用户

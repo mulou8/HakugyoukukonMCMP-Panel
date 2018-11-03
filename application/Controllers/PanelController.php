@@ -50,6 +50,8 @@ class PanelController extends Controller{
         $this->assign("loginTimes",$info['login']['times']);
         $this->assign("loginFailureTimes",$info['login']['failure_times']);
         $this->assign("authenticationFailure",$info['login']['AuthenticationFailure']);
+        $this->assign("daemon",$info['daemon']['number']);
+        $this->assign("servers",$info['server']['number']);
 
         //用户
         $this->assign("id",$info['user']['id']);

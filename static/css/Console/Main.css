@@ -2,38 +2,50 @@
     display: none;
 }
 
-.console-contain{
-    margin-top: 1%;
-
-    width: 96%;
-    height: 66%;
-    margin-left: 2%;
+#console{
+    height: 70%;
 }
 
-#console{
-    height: 100%;
+.main-container{
+    width: 98%;
+
+    margin-left: 1%;
+    margin-top: 1%;
 }
 
 #console .box-body{
+    height: 90%;
+    padding-bottom: 2px;
+}
+
+.contain-output{
+    height: 92%;
+}
+
+.output{
+    overflow: auto;
     height: 100%;
 }
 
-#console .output{
-    height: 94%;
-    overflow: auto;
+.output p{
+    padding-top: 2px;
+    margin: 0;
 }
 
- .contain{
-     width: 98%;
-     margin-left: 1%;
- }
+/**
+==================================================
+ */
 
- .output p{
-     padding-top: 2px;
-     margin: 0;
- }
+#tool{
+    width: 100%;
+    vertical-align: top;
 
- .contain-output{
-     width: 98%;
-     margin-left: 1%;
- }
+    margin-bottom: 25px;
+}
+
+#chose-server{
+    width: 100%;
+    vertical-align: top;
+
+    margin-bottom: 25px;
+}
