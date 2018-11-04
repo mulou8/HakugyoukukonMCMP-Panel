@@ -69,7 +69,7 @@
                 <div class="box-head">选择服务器</div>
 
                 <div class="box-body">
-                    
+
                 </div>
             </div>
         </div>
