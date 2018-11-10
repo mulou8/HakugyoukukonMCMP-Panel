@@ -35,8 +35,8 @@ HakugyoukukonMCMP 使用Java Daemon 加标准输入输出。
 
 #### 如何获取BCrypt加密后的密文
 > https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=你的密码
-> 
-密码为123123的密文: https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=123123
+> 密码为123123的密文: https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=123123
+
 
 
 ### 将来更新
