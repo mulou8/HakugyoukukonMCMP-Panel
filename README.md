@@ -31,7 +31,7 @@ HakugyoukukonMCMP 使用Java Daemon 加标准输入输出。
 
 ### 使用方法
 #### 添加用户
-> 执行Mysql语句 INSERT INTO `user`(`username`, `password`, `email`) VALUES ("用户名","BCrypt加密后的密码","邮箱")
+> 执行Mysql语句 INSERT INTO \`user\`(\`username\`, \`password\`, \`email\`) VALUES (\"用户名\",\"BCrypt加密后的密码\",\"邮箱\")
 
 #### 如何获取BCrypt加密后的密文
 > https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=你的密码
