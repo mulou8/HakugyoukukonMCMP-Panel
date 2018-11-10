@@ -27,6 +27,23 @@
         <script>
             $(document).ready(function () {
                 $("#time_used",window.parent.document).html(<?php echo USED?>);
+
+                //test
+
+                $.ajax({
+                    url: "http://192.168.31.128:6060/ServerAdd",
+                    async: true,
+                    processData: false,
+                    type: "GET",
+                    timeout: 4000,
+                    data: "qwq=aaa&test=tqq",
+                    crossDomain: true,
+
+                    success: function (data) {
+                        $("#out-content").html(data);
+                    }
+                });
+
             });
         </script>
 	</head>

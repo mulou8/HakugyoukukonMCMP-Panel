@@ -21,6 +21,14 @@ class ConsoleController extends Controller{
     }
 
     public function Main(){
+        header('Access-Control-Allow-Origin:*');
+        header('Access-Control-Allow-Methods:*');
+
         $this->rander();
     }
+
+    /*
+    public function Sender(){
+        print_r((new ConsoleModel())->Sender($_POST));
+    }*/
 }

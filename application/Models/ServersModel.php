@@ -191,15 +191,29 @@ class ServersModel extends Model{
 
         $uuid = $this->makeUUID();
 
-        //获取daemon-ip
+        //获取infomation
         $this->setTable("daemon");
-        $ip = $this->searchContant("fqdn","id='".$url[7]."'");
+        $daemonIp = $this->searchContant("fqdn","id='".$url[7]."'");
+        $daemonUrl = $this->searchContant("ajax_host","id='".$url[7]."'");
+
+        /**
+         * 跟daemon谈心
+         */
+
+        $daemonUrl = $daemonUrl . "/ServerAdd?uuid=" . $uuid[0];
+        //return $daemonUrl;
+
+        $response = file_get_contents($daemonUrl);
+
+        if ($response == "false"){
+            return "10";
+        }
 
         $this->setTable("servers");
 
         $this->insert(
             array("uuid","name","daemon_id","uuid_short","port","max_memory","run_cmd","stop_cmd","jar_name","ftp_pass","daemon_ip"),
-            array($uuid[0],$url[0],$url[7],$uuid[1],$url[5],$url[1],$url[3],$url[4],$url[2],$url[6],$ip)
+            array($uuid[0],$url[0],$url[7],$uuid[1],$url[5],$url[1],$url[3],$url[4],$url[2],$url[6],$daemonIp)
         );
 
         return "0";

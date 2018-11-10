@@ -92,6 +92,16 @@
                                 return;
                             }
 
+                            if (data == "10"){
+                                message.html("无法连接目标daemon服务器 服务器创建失败");
+
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
+                                return;
+                            }
+
                             if (data == "-4"){
                                 message.html("服务器端口必须 大于1 小于65534");
 
