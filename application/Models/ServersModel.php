@@ -238,6 +238,23 @@ class ServersModel extends Model{
         return $html;
     }
 
+    public function GetServerList(){
+        $this->setTable("servers");
+        $arr = $this->searchFullArr("*","1=1");
+
+        $html = "";
+        for ($i = 0; $i < count($arr); $i++){
+            $id = $arr[$i][0];
+
+            $html = $html."<div class=\"daemon-list\" onclick='chose($id);'>";
+            $html = $html."<p>ID:&nbsp;".$arr[$i][0]."&nbsp;名称: ".$arr[$i][3]."</p>";
+            $html = $html."<p>".$arr[$i][11].":".$arr[$i][5]."&nbsp;|&nbsp;Memory:&nbsp;".$arr[$i][6]."MB</p>";
+            $html = $html."</div>";
+        }
+
+        return $html;
+    }
+
     public function ServerInfo(array $url){
         if ($url['id'] == null){
             return "-1";
@@ -295,15 +312,35 @@ class ServersModel extends Model{
             return "-1";
         }
 
-        //删除数据库里面的服务器
-        $this->setTable("servers");
-        $this->delete("id='".$url['id']."'");
 
         /**
          * 重头戏!   远程Daemon删除服务器
          */
 
+        //服务器信息
+        $this->setTable("servers");
+        $serverArr = $this->searchArr("*","id='".$url['id']."'");
 
+        $daemonID = $serverArr['daemon_id'];
+        $uuid = $serverArr['uuid'];
+
+        //获取infomation
+        $this->setTable("daemon");
+        $daemonIp = $this->searchContant("fqdn","id='".$daemonID."'");
+        $daemonUrl = $this->searchContant("ajax_host","id='".$daemonID."'");
+        $daemonKey = $this->searchContant("key","id='".$daemonID."'");
+
+        $daemonUrl = $daemonUrl . "/ServerDelete?uuid=" . $uuid . "&key=" . $daemonKey;
+
+        $response = file_get_contents($daemonUrl);
+
+        //删除数据库里面的服务器
+        $this->setTable("servers");
+        $this->delete("id='".$url['id']."'");
+
+        if ($response == "false"){
+            return "10";
+        }
 
         //返回yes!
         return "0";

@@ -27,6 +27,10 @@ class ConsoleController extends Controller{
         $this->rander();
     }
 
+    public function GetServerInfo(){
+        echo (new ConsoleModel())->GetServerInfo($_POST['id']);
+    }
+
     /*
     public function Sender(){
         print_r((new ConsoleModel())->Sender($_POST));

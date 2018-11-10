@@ -50,10 +50,9 @@
                 <p class="fa fa-cubes"></p>&nbsp;&nbsp;<?php echo $DaemonManagement?>
             </li>
 
-
-            <li id="userManagement" class="use">
-                <p class="fa fa-users"></p>&nbsp;&nbsp;<?php echo $userManagement?>
-            </li>
+            <!--<li id="userManagement" class="use">
+                <p class="fa fa-users"></p>&nbsp;&nbsp;<?php //echo //$userManagement?>
+            </li>-->
         </ul>
     </div>
 

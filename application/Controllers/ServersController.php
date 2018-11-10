@@ -61,6 +61,10 @@ class ServersController extends Controller{
         echo((new ServersModel())->ServerAdd($_POST));
     }
 
+    public function GetServerList(){
+        echo (new ServersModel())->GetServerList();
+    }
+
     public function ServerInfo(){
         echo((new ServersModel())->ServerInfo($_POST));
     }

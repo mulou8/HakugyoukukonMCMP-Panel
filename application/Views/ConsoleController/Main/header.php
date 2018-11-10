@@ -22,27 +22,47 @@
                 font-display:auto;
                 src: url('/static/fonts/FontAwesome.otf');
             }
+
+            @font-face{
+                font-family: 'Nico';
+                font-display:auto;
+                src: url('/static/fonts/nico.ttf');
+            }
         </style>
 
         <script>
+            //Get info
             $(document).ready(function () {
-                $("#time_used",window.parent.document).html(<?php echo USED?>);
 
-                //test
+                var messageBox = $(window.parent.document).find(".container-message");
+                var message = $(window.parent.document).find("#message");
 
+                $("#time_used", window.parent.document).html(<?php echo USED?>);
+
+                //Server list
                 $.ajax({
-                    url: "http://192.168.31.128:6060/ServerAdd",
+                    url: "/Servers/GetServerList",
                     async: true,
                     processData: false,
                     type: "GET",
                     timeout: 4000,
-                    data: "qwq=aaa&test=tqq",
-                    crossDomain: true,
 
                     success: function (data) {
-                        $("#out-content").html(data);
+                        $("#server-list").html(data);
+                    },
+
+                    error: function (err, text) {
+                        message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text + "</code>");
+
+                        setTimeout(function () {
+                            messageBox.fadeOut(200, "linear");
+                        }, 600);
                     }
                 });
+
+                setInterval(function () {
+                    document.getElementsByClassName("output")[0].scrollTop = document.getElementsByClassName("output")[0].scrollHeight;
+                },500);
 
             });
         </script>

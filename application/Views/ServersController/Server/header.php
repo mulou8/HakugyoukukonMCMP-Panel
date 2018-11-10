@@ -250,6 +250,21 @@
                                     return;
                                 }
 
+                                if (data == "10"){
+                                    message.html("删除失败 无法连接到daemon<br>请尝试停止服务器后删除");
+
+                                    messageBox.fadeIn(400);
+                                    setTimeout(function () {
+                                        messageBox.fadeOut(400,"linear");
+
+                                        setTimeout(function () {
+                                            location.reload();
+                                        },420);
+                                    },800);
+
+                                    return;
+                                }
+
                                 if (data == "-1"){
                                     message.html("错误: 无法获取服务器ID 请联系开发者");
 

@@ -14,7 +14,7 @@ namespace application\models;
 use HakugyokuSoulMVC\base\Model;
 
 class ConsoleModel extends Model{
-    /*
+    /* 没有用的中间件
     public function Sender(array $url){
         $sendUrl = $url['url'];
         array_shift($url);
@@ -34,4 +34,39 @@ class ConsoleModel extends Model{
 
         return $post;
     }*/
+
+
+    public function GetServerInfo($id){
+        //info p1
+        $this->setTable("servers");
+
+        $sInfoArr = $this->searchArr("*","id='$id'");
+        $uuid = $sInfoArr['uuid'];
+        $daemonId = $sInfoArr['daemon_id'];
+
+        $cmd = $sInfoArr['run_cmd'];
+        $core = $sInfoArr['jar_name'];
+        $stop = $sInfoArr['stop_cmd'];
+        $memory = $sInfoArr['max_memory'];
+
+        $cmd = str_replace("{maxram}",$memory,$cmd);
+        $cmd = str_replace("{jar}",$core,$cmd);
+
+        //daemon info
+        $this->setTable("daemon");
+
+        $dInfoArr = $this->searchArr("*","id='$daemonId'");
+        $ajax = $dInfoArr['ajax_host'];
+        $key = $dInfoArr['key'];
+
+        $json = array(
+            "uuid" => $uuid,
+            "ajax" => $ajax,
+            "key" => $key,
+            "runcmd" => $cmd,
+            "stop" => $stop
+        );
+
+        return json_encode($json);
+    }
 }
