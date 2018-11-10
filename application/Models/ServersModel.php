@@ -195,12 +195,13 @@ class ServersModel extends Model{
         $this->setTable("daemon");
         $daemonIp = $this->searchContant("fqdn","id='".$url[7]."'");
         $daemonUrl = $this->searchContant("ajax_host","id='".$url[7]."'");
+        $daemonKey = $this->searchContant("key","id='".$url[7]."'");
 
         /**
          * 跟daemon谈心
          */
 
-        $daemonUrl = $daemonUrl . "/ServerAdd?uuid=" . $uuid[0];
+        $daemonUrl = $daemonUrl . "/ServerAdd?uuid=" . $uuid[0] . "&key=" . $daemonKey;
         //return $daemonUrl;
 
         $response = file_get_contents($daemonUrl);
@@ -301,6 +302,7 @@ class ServersModel extends Model{
         /**
          * 重头戏!   远程Daemon删除服务器
          */
+
 
 
         //返回yes!
