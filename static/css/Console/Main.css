@@ -64,6 +64,10 @@ button{
     padding-right: 5px;
 }
 
+.online-player p{
+    margin: 0 0 4px !important;
+}
+
 .online-player #max{
     color: #3d9bf1;
     padding-left: 5px;

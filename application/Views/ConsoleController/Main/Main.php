@@ -28,15 +28,23 @@
 
                 <div class="box-body">
                     <div class="online-player">
-                        <p id="online">0</p><p>/</p><p id="max">100</p>
+                        <p id="online">0</p><p>/</p><p id="max">0</p>
                     </div>
 
+                    <div class="server-info">
+                        <div id="checkbox" style="margin-bottom: 6px;">
+                            <input type="checkbox" id="bar" style="margin-top: 4px;display: inline-block;" checked="checked">&nbsp;
+                            <p style="vertical-align: top; display: inline-block; margin: 0;">保持输出滚动</p>
+                        </div>
+
+                    </div>
 
                     <div class="btn-block">
                         <button class="btn btn-success" id="start"><i class="fa fa-play"></i>&nbsp;启动</button>&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-warning" id="restart"><i class="fa fa-retweet"></i>&nbsp;重启</button>&nbsp;&nbsp;&nbsp;
                         <button class="btn btn-danger" id="stop"><i class="fa fa-stop"></i>&nbsp;关闭</button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -59,65 +67,45 @@
 
                     //Chose Server
                     function chose(id) {
+                        ajax("/Console/GetServerInfo","POST","id=" + id,4000,function (data) {
+                            isChose = true;
+                            send = true;
 
-                        $.ajax({
-                            url: "/Console/GetServerInfo",
-                            async: true,
-                            processData: false,
-                            type: "POST",
-                            timeout: 4000,
-                            data: "id=" + id,
+                            var json = JSON.parse(data);
 
-                            success: function (data) {
-                                isChose = true;
-                                send = true;
-                                var json = JSON.parse(data);
-
-                                uuid = json.uuid;
-                                ajax_host = json.ajax;
-                                key = json.key;
-                                runcmd = json.runcmd;
-                                stop = json.stop;
-                            },
-
-                            error: function (err,text) {
-                                message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");
-
-                                messageBox.fadeIn(400);
-                                setTimeout(function () {
-                                    messageBox.fadeOut(400,"linear");
-                                },400);
-                            }
+                            uuid = json.uuid;
+                            ajax_host = json.ajax;
+                            key = json.key;
+                            runcmd = json.runcmd;
+                            stop = json.stop;
                         });
                     }
 
                     setInterval(function () {
 
                         if (isChose == true && send == true) {
-                            $.ajax({
-                                url: ajax_host + "/ServerConsole/Output?uuid=" + uuid + "&key=" + key,
-                                async: true,
-                                processData: false,
-                                type: "GET",
-                                timeout: 8000,
-                                data: "",
-                                crossDomain: true,
+                            //输出
+                            ajax(ajax_host + "/ServerConsole/Output?uuid=" + uuid + "&key=" + key,"GET","",4000,function (data) {
+                                $("#out-content").html(data);
+                            },function (err,text) {
+                                message.html("<code>与daemon的连接已断开: " + err.status + "&nbsp;" + text +"</code>");
 
-                                success: function (data) {
-                                    $("#out-content").html(data);
-                                },
+                                messageBox.fadeIn(400);
+                                setTimeout(function () {
+                                    messageBox.fadeOut(400,"linear");
+                                },800);
 
-                                error: function (err,text) {
-                                    message.html("<code>与daemon的连接已断开: " + err.status + "&nbsp;" + text +"</code>");
-
-                                    messageBox.fadeIn(400);
-                                    setTimeout(function () {
-                                        messageBox.fadeOut(400,"linear");
-                                    },800);
-
-                                    isChose = false;
-                                }
+                                send = false;
+                                isChose = false;
                             });
+
+                            //在线人数
+                            ajax(ajax_host + "/GetInfo?uuid=" + uuid + "&key=" + key,"GET","",4000,function (data) {
+                                var json = JSON.parse(data);
+
+                                $("#max").html(json.max);
+                                $("#online").html(json.online);
+                            })
                         }
 
                     },1000);
@@ -137,17 +125,8 @@
                                 return;
                             }
 
-                            $.ajax({
-                                url: ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + $("#cmd").val(),
-                                async: true,
-                                processData: false,
-                                type: "GET",
-                                timeout: 4000,
-                                crossDomain: true,
-                                
-                                success: function () {
-                                    $("#cmd").val("");
-                                }
+                            ajax(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + $("#cmd").val(),"GET","",4000,function () {
+                                $("#cmd").val("");
                             });
                         }
                     });

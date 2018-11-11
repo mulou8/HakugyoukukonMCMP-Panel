@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="/static/css/layer.css">
 
         <script src="/static/js/jquery-3.2.1.js"></script>
+        <script src="/static/js/ajax.js"></script>
 
         <style type="text/css">
             body{
@@ -33,37 +34,25 @@
         <script>
             //Get info
             $(document).ready(function () {
-
-                var messageBox = $(window.parent.document).find(".container-message");
-                var message = $(window.parent.document).find("#message");
-
                 $("#time_used", window.parent.document).html(<?php echo USED?>);
 
                 //Server list
-                $.ajax({
-                    url: "/Servers/GetServerList",
-                    async: true,
-                    processData: false,
-                    type: "GET",
-                    timeout: 4000,
+                ajax("/Servers/GetServerList","GET","",4000,function (data) {
+                    $("#server-list").html(data);
+                },function (err,text) {
+                    message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text +"</code>");
 
-                    success: function (data) {
-                        $("#server-list").html(data);
-                    },
-
-                    error: function (err, text) {
-                        message.html("<code>AJAX请求错误: " + err.status + "&nbsp;" + text + "</code>");
-
-                        setTimeout(function () {
-                            messageBox.fadeOut(200, "linear");
-                        }, 600);
-                    }
+                    messageBox.fadeIn(400)
+                    setTimeout(function () {
+                        messageBox.fadeOut(200,"linear");
+                    },600);
                 });
 
                 setInterval(function () {
-                    document.getElementsByClassName("output")[0].scrollTop = document.getElementsByClassName("output")[0].scrollHeight;
+                    if ($("#bar").is(':checked') == true){
+                        document.getElementsByClassName("output")[0].scrollTop = document.getElementsByClassName("output")[0].scrollHeight;
+                    }
                 },500);
-
             });
         </script>
 	</head>

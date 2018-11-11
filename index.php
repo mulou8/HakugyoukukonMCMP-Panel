@@ -31,6 +31,9 @@ require(APP_PATH . 'HakugyokuSoulMVC/HakugyokuSoulMVC.php');
 //内存限制
 ini_set('memory_limit', '256');
 
+//设置头
+header("Access-Control-Allow-Origin: *");
+
 // 加载配置文件
 $config =APP_PATH . 'Conf/Conf.ini';
 
