@@ -69,4 +69,29 @@ class ConsoleModel extends Model{
 
         return json_encode($json);
     }
+
+    public function Ping($id){
+        $this->setTable("servers");
+
+        $sInfoArr = $this->searchArr("*","uuid='$id'");
+        $daemonId = $sInfoArr['daemon_id'];
+
+        $this->setTable("daemon");
+        $dInfoArr = $this->searchArr("*","id='$daemonId'");
+        $ajax = $dInfoArr['ajax_host'];
+
+        $connection = str_replace("http://","",$ajax);
+        $ip = explode(":",$connection)[0];
+        $port = explode(":",$connection)[1];
+
+        $start = microtime(true);
+
+        fsockopen($ip,$port,$err,$errstr,4000);
+
+        if ($err != null){
+            return "Connect Fail";
+        }
+
+        return round(microtime(true) - $start,0);
+    }
 }

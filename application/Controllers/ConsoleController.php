@@ -31,6 +31,10 @@ class ConsoleController extends Controller{
         echo (new ConsoleModel())->GetServerInfo($_POST['id']);
     }
 
+    public function Ping(){
+        echo (new ConsoleModel())->Ping($_POST['id']);
+    }
+
     /*
     public function Sender(){
         print_r((new ConsoleModel())->Sender($_POST));

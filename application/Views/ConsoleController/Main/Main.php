@@ -31,6 +31,10 @@
                         <p id="online">0</p><p>/</p><p id="max">0</p>
                     </div>
 
+                    <div class="ping">
+                        <p style="display: inline-block">当前延时:&nbsp;</p><p id="ping-value" style="display: inline-block">Unknown</p><p style="display: inline-block">&nbsp;ms</p>
+                    </div>
+
                     <div class="server-info">
                         <div id="checkbox" style="margin-bottom: 6px;">
                             <input type="checkbox" id="bar" style="margin-top: 4px;display: inline-block;" checked="checked">&nbsp;
@@ -105,7 +109,12 @@
 
                                 $("#max").html(json.max);
                                 $("#online").html(json.online);
-                            })
+                            });
+
+                            //Ping
+                            ajax("/Console/Ping","POST","id=" + uuid,4000,function (data) {
+                                $("#ping-value").html(data);
+                            });
                         }
 
                     },1000);
