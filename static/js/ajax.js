@@ -6,6 +6,7 @@ function ajax(host,method,data,timeout,success,err) {
         url: host,
         async: true,
         processData: false,
+        charset: "gbk",
         type: method,
         timeout: timeout,
         data: data,

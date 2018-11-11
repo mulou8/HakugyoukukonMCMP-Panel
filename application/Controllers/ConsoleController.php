@@ -32,7 +32,7 @@ class ConsoleController extends Controller{
     }
 
     public function Ping(){
-        echo (new ConsoleModel())->Ping($_POST['id']);
+        echo (new ConsoleModel())->Ping($_POST['ajax']);
     }
 
     /*

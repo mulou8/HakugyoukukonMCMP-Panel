@@ -142,7 +142,7 @@ class ServersModel extends Model{
         for ($i = 0; $i < count($arr); $i++){
             $id = $arr[$i][0];
             $name = $arr[$i][1];
-            $ip = $html.$arr[$i][3];
+            $ip = $arr[$i][3];
 
             $html = $html."<option id='$id'>";
             $html = $html."$name&nbsp;($ip)";

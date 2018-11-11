@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta  http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta  http-equiv="content-type" content="text/html; charset=gbk"/>
 		<meta name="renderer" content="ie-stand">
 
         <link rel="stylesheet" href="/static/css/font-awesome.css"/>

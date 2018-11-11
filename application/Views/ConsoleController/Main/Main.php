@@ -112,7 +112,7 @@
                             });
 
                             //Ping
-                            ajax("/Console/Ping","POST","id=" + uuid,4000,function (data) {
+                            ajax("/Console/Ping","POST","ajax=" + ajax_host,4000,function (data) {
                                 $("#ping-value").html(data);
                             });
                         }
