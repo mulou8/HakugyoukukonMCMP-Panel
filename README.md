@@ -33,7 +33,7 @@ HakugyoukukonMCMP 使用Java Daemon 加标准输入输出。
 ### 使用方法
 #### 添加用户
 > 1.打开Shell 或 Cmd 注意要跟UserAdd.php 在同一个目录
-> 2.输入php UserAdd.php 你的用户名 密码 游戏
+> 2.输入php UserAdd.php 你的用户名 密码 邮箱
 > 3.按下回车 即可添加用户
 
 
