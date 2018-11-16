@@ -49,6 +49,16 @@
                         <button class="btn btn-danger" id="stop"><i class="fa fa-stop"></i>&nbsp;关闭</button>
                     </div>
 
+                    <div class="ftpDiv" style="margin-top: 10px;">
+                        <p style="display: inline-block; margin-bottom: 4px;">Ftp 用户名:&nbsp;&nbsp;</p>
+                        <code style="display: inline-block; margin-bottom: 4px; background-color: #252626;" id="ftpUser">Unknown</code>
+
+                        <br>
+
+                        <p style="display: inline-block; margin-bottom: 4px;">Ftp 密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <code style="display: inline-block; margin-bottom: 4px; background-color: #252626;" id="ftpPass">Unknown</code>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -68,6 +78,8 @@
                     var send = true;
                     var runcmd ="";
                     var stop ="";
+                    var ftpPass = "";
+                    var ftpUser = "";
 
                     //Chose Server
                     function chose(id) {
@@ -81,7 +93,11 @@
                             ajax_host = json.ajax;
                             key = json.key;
                             runcmd = json.runcmd;
-                            stop = json.stop;
+                            ftpPass = json.ftpPass;
+                            ftpUser = json.ftpUser;
+
+                            $("#ftpPass").html(ftpPass);
+                            $("#ftpUser").html(ftpUser);
                         });
                     }
 
@@ -89,7 +105,7 @@
 
                         if (isChose == true && send == true) {
                             //输出
-                            ajax(ajax_host + "/ServerConsole/Output?uuid=" + uuid + "&key=" + key,"GET","",4000,function (data) {
+                            ajax(ajax_host + "/ServerConsole/Output?uuid=" + uuid + "&key=" + key + "&ftpPass=" + ftpPass,"GET","",4000,function (data) {
                                 $("#out-content").html(data);
                             },function (err,text) {
                                 message.html("<code>与daemon的连接已断开: " + err.status + "&nbsp;" + text +"</code>");
@@ -104,7 +120,7 @@
                             });
 
                             //在线人数
-                            ajax(ajax_host + "/GetInfo?uuid=" + uuid + "&key=" + key,"GET","",4000,function (data) {
+                            ajax(ajax_host + "/GetInfo?uuid=" + uuid + "&key=" + key + "&ftpPass=" + ftpPass,"GET","",4000,function (data) {
                                 var json = JSON.parse(data);
 
                                 $("#max").html(json.max);
@@ -134,7 +150,7 @@
                                 return;
                             }
 
-                            ajax(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + $("#cmd").val(),"GET","",4000,function () {
+                            ajax(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + $("#cmd").val() + "&ftpPass=" + ftpPass,"GET","",4000,function () {
                                 $("#cmd").val("");
                             });
                         }
@@ -142,20 +158,20 @@
 
                     //启动
                     $("#start").click(function () {
-                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + runcmd);
+                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + runcmd + "&ftpPass=" + ftpPass);
                     });
 
                     //启动
                     $("#stop").click(function () {
-                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + stop);
+                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + stop + "&ftpPass=" + ftpPass);
                     });
 
                     //启动
                     $("#restart").click(function () {
-                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + stop);
+                        $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + stop + "&ftpPass=" + ftpPass);
 
                         setTimeout(function () {
-                            $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + runcmd)
+                            $.post(ajax_host + "/ServerConsole/Input?uuid=" + uuid + "&key=" + key + "&cmd=" + runcmd + "&ftpPass=" + ftpPass)
                         },4000);
                     });
                 </script>

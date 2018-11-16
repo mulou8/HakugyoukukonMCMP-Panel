@@ -32,11 +32,9 @@ HakugyoukukonMCMP 使用Java Daemon 加标准输入输出。
 
 ### 使用方法
 #### 添加用户
-> 执行Mysql语句 INSERT INTO \`user\`(\`username\`, \`password\`, \`email\`) VALUES (\"用户名\",\"BCrypt加密后的密码\",\"邮箱\")
-
-#### 如何获取BCrypt加密后的密文
-> https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=你的密码
-> 密码为123123的密文: https://api.saigyoujiyuyuko.top:9000/BCrypt.php?pass=123123
+> 1.打开Shell 或 Cmd 注意要跟UserAdd.php 在同一个目录
+> 2.输入php UserAdd.php 你的用户名 密码 游戏
+> 3.按下回车 即可添加用户
 
 
 

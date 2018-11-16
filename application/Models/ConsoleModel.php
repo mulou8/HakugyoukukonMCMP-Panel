@@ -48,6 +48,8 @@ class ConsoleModel extends Model{
         $core = $sInfoArr['jar_name'];
         $stop = $sInfoArr['stop_cmd'];
         $memory = $sInfoArr['max_memory'];
+        $ftpPass = $sInfoArr['ftp_pass'];
+        $ftpUser = explode("-",$uuid)[0];
 
         $cmd = str_replace("{maxram}",$memory,$cmd);
         $cmd = str_replace("{jar}",$core,$cmd);
@@ -64,7 +66,9 @@ class ConsoleModel extends Model{
             "ajax" => $ajax,
             "key" => $key,
             "runcmd" => $cmd,
-            "stop" => $stop
+            "stop" => $stop,
+            "ftpPass" => $ftpPass,
+            "ftpUser" => $ftpUser
         );
 
         return json_encode($json);

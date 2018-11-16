@@ -20,7 +20,7 @@
         <ul>
             <li class="image-li">
                 <div class="container-image">
-                    <img class="image" src="https://www.gravatar.com/avatar/<?php echo $emailMd5?>?s=80">
+                    <img class="image" src="https://www.gravatar.com/avatar/<?php echo $emailMd5?>?s=70">
 
                     <div class="text">
                         <p id="username"><?php echo $username?></p>
